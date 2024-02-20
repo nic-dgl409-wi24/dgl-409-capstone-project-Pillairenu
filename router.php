@@ -1,7 +1,7 @@
 <?php
 
 $uri =parse_url($_SERVER['REQUEST_URI'])['path'];
-echo $uri;
+$uri;
 $routes = [
     '/' => 'controllers/index.php'
 ];
