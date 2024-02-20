@@ -1,4 +1,17 @@
-/* CSS Reset */
+/*
+COLOR PALETTE
+https://coolors.co/eaefbd-c9e3ac-90be6d-ea9010-37371f
+
+#90BE6D
+#C9E3AC
+#EA9010
+#37371F
+#EAEFBD
+
+*/
+
+
+/* Custom CSS Reset */
 
 *,
 *::before,
@@ -43,4 +56,34 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+}
+
+header {
+
+    background-color: #ADE25D;
+    /* background-color: #90BE6D; */
+    color: white;
+}
+
+nav {
+    display: flex;
+}
+
+.hero {
+    display: flex;
+    padding: 4em;
+    align-items: center;
+}
+
+.hero-text {
+    width: 40%;
+}
+
+.hero-image {
+    width: 60%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
 }
