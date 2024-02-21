@@ -2,11 +2,9 @@
 COLOR PALETTE
 https://coolors.co/eaefbd-c9e3ac-90be6d-ea9010-37371f
 
-#90BE6D
-#C9E3AC
-#EA9010
-#37371F
-#EAEFBD
+font-family: "Noto Sans", sans-serif;
+font-family: "Righteous", sans-serif;
+font-family: "Merriweather", serif;
 
 */
 
@@ -60,11 +58,6 @@ h6 {
     overflow-wrap: break-word;
 }
 
-.righteous-regular {
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
 
 
 header {
@@ -81,8 +74,13 @@ header {
 
 }
 
+.navbar-logo {
+    padding-left: 2.5em;
+}
+
 .navbar-logo img {
-    height: 50px;
+    height: 65px;
+
 
 }
 
@@ -93,13 +91,15 @@ header {
 }
 
 .navbar-nav li {
-    margin-left: 3em;
+
+    padding-right: 2.5em;
 }
 
 .navbar-nav li a {
     text-decoration: none;
-    font-size: 1.1em;
     color: #40531B;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
 
 }
 

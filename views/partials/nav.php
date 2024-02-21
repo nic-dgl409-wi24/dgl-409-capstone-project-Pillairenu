@@ -10,7 +10,7 @@
     </nav> -->
     <nav class="navbar">
     <a href="/" class="navbar-logo">
-        <!-- <img src="images/RideConnect-logos.png" alt="Logo" style="height: 50px;">  -->
+        <img src="images/logo-2.png" alt="Logo" > 
     </a>
     <ul class="navbar-nav">
       
