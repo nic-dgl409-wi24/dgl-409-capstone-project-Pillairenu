@@ -6,10 +6,13 @@ font-family: "Noto Sans", sans-serif;
 font-family: "Righteous", sans-serif;
 font-family: "Merriweather", serif;
 
+background-color: #ADE25D;
+color: #40531B;
+
 */
 
 
-/* Custom CSS Reset */
+/*--------- Custom CSS Reset--------- */
 
 *,
 *::before,
@@ -25,8 +28,9 @@ font-family: "Merriweather", serif;
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    color: white;
+    color: rgb(24, 24, 24);
     font-size: 16px;
+    font-family: "Noto Sans", sans-serif;
 }
 
 
@@ -59,7 +63,7 @@ h6 {
 }
 
 
-
+/*----------- Header and Nav of home page---------- */
 header {
 
     background-color: #ADE25D;
@@ -98,7 +102,7 @@ header {
 .navbar-nav li a {
     text-decoration: none;
     color: #40531B;
-    font-family: "Merriweather", serif;
+    font-family: "Noto Sans", sans-serif;
     font-weight: bolder;
 
 }
@@ -123,7 +127,6 @@ header {
 }
 
 
-
 .hero-image {
     width: 60%;
 }
@@ -131,4 +134,58 @@ header {
 .hero-image img {
     width: 100%;
     height: auto;
+}
+
+
+/* ------------Footer----------- */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #1E90FF;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    display: inline-block;
+    color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 4rem;
+    margin-left: 4rem;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+
+    }
 }

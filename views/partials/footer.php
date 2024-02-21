@@ -1,39 +1,43 @@
 
- <!-- Footer -->
- <footer>
-   
-    
-    <!-- Contact Info -->
-    <section class="contactInfo">
-      <article>
-        <h4>Contact Information</h4>
-        <ul>
-          <li>Phone: 250-000-0000</li>
-          <li>Email: info@cvrn.com</li>
-          <li>Address: 1015, Cumberland Road, Courtenay</li>
-        </ul>
-        
-      </article>
-    </section>
+<footer>
+        <div class="footer-container">
+            <!-- Contact Information -->
+            <section class="footer-section contact-info">
+                <h4>Contact Us</h4>
+                <p>Email: info@rideconnect.ca</p>
+                <p>Location: 1015, Cumberland Road, Courtenay</p>
+            </section>
 
-    <!-- Social Media -->
-    <section class="social">
-      <article>
-        <h3>Let's be social - connect with us!</h3>
-        <div class="socialIcons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          
+            <!-- Quick Links -->
+            <section class="footer-section quick-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </section>
+
+            <!-- Social Media -->
+            <section class="footer-section social-media">
+                <h4>Connect With Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </section>
         </div>
-      </article>
-    </section>
-   
-  </footer>
-  <div class="copyright">
-        <p>CVRN &copy;2023. All rights reserved.</p>
-    </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            
+          <p><small>&copy; 2024 RideConnect. All rights reserved.</small></p>
+        </div>
+    </footer>
+
 </body>
 </html>
