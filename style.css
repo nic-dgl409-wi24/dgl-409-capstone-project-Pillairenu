@@ -169,7 +169,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    color: #1E90FF;
+    color: #EA9010;
 }
 
 .social-icons a {
@@ -199,9 +199,9 @@ footer {
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px 20px;
-    background-color: #EAEFBD;
-    
+    /* padding: 20px 20px; */
+    background-color: #FCEC52;
+    padding: 3em;
     border-radius: 1em;
 	box-shadow: 1.5em 1.5em 1px #ADE25D;
 }
@@ -219,6 +219,8 @@ footer {
 .text-side h2 {
     margin-bottom: 20px;
     font-family: "Merriweather", serif;
+    color: #40531B;
+    font-size: bold;
 }
 
 .text-side p {
@@ -240,12 +242,11 @@ footer {
     background-color: #c77c15;
 }
 
-
-
 .features-list {
     display: flex; /* Apply Flexbox */
     flex-direction: row;
     align-items: center;
+    padding-bottom: 1em;
     
 }
 

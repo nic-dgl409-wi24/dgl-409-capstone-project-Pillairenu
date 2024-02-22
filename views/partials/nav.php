@@ -14,8 +14,8 @@
     </a>
     <ul class="navbar-nav">
       
-        <li><a href="#services">Driver</a></li>
-        <li><a href="#about">Passenger</a></li>
+        <li><a href="#driver">Driver</a></li>
+        <li><a href="#passenger">Passenger</a></li>
         <li><a href="#about">Log In</a></li>
     </ul>
   </nav>
