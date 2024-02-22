@@ -3,7 +3,9 @@
 $uri =parse_url($_SERVER['REQUEST_URI'])['path'];
 $uri;
 $routes = [
-    '/' => 'controllers/index.php'
+    '/' => 'controllers/index.php',
+    '/signin'=>'controllers/signin.php',
+    '/signup'=>'controllers/signup.php'
 ];
 
 //function to handle routing
