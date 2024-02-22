@@ -200,7 +200,7 @@ footer {
     max-width: 1100px;
     margin: 0 auto;
     /* padding: 20px 20px; */
-    background-color: #FCEC52;
+    background-color: #EAEFBD;
     padding: 3em;
     border-radius: 1em;
 	box-shadow: 1.5em 1.5em 1px #ADE25D;
@@ -266,7 +266,10 @@ footer {
     padding-bottom:1rem;
     padding-left:2rem;
 }
-
+.home-page-content
+{
+    background-color:#F9F9F9;
+}
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
     .footer-container {
