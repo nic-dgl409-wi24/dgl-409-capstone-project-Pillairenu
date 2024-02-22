@@ -6,8 +6,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/favicon.png">
     <!-- load font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Link style sheet -->
+    <script src="https://kit.fontawesome.com/4f8fb381e3.js" crossorigin="anonymous"></script>
+     <!-- Link style sheet -->
     <link rel="stylesheet" type="text/css" href="style.css">    
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
