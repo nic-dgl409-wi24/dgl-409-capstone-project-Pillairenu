@@ -5,7 +5,8 @@ $uri;
 $routes = [
     '/' => 'controllers/index.php',
     '/signin'=>'controllers/signin.php',
-    '/signup'=>'controllers/signup.php'
+    '/driver-signup'=>'controllers/driver-signup.php',
+    '/passenger-signup'=>'controllers/passenger-signup.php'
 ];
 
 //function to handle routing
