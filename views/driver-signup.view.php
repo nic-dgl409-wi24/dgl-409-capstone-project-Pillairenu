@@ -51,10 +51,7 @@
     <input type="file" id="govIdFile" name="govIdFile" accept=".pdf,.jpg,.jpeg,.png" required>
     </div>
     <div class="registration-form-group">
-    <div class="checkbox">
-        <input type="checkbox" id="backgroundCheck" name="backgroundCheck" required>
-        <label for="backgroundCheck">I consent to a background check</label>
-    </div>
+    
     </div>
     <button type="submit" class="signin-btn">Next</button>
 </form>

@@ -57,7 +57,12 @@
         <label for="vehiclePhoto">Vehicle Photo (upload):</label>
         <input type="file" id="vehiclePhoto" name="vehiclePhoto" required>
     </div>
-
+    <!-- Hidden field for the driver role -->
+    <input type="hidden" name="role" value="driver">
+    <div class="checkbox">
+        <input type="checkbox" id="backgroundCheck" name="backgroundCheck" required>
+        <label for="backgroundCheck">I consent to a background check</label>
+    </div>
     <button type="submit" class="signin-btn">Submit</button>
     </form>
 </div>
