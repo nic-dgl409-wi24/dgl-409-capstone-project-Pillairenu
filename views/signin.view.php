@@ -17,8 +17,8 @@
     </form>
     <div class="register-links">
         <h3> Don’t have an account?</h3>
-        <a href="register-driver.html">Register as a Driver</a>
-        <a href="register-passenger.html">Register as a Passenger</a>
+        <a href="/driver-signup">Register as a Driver</a>
+        <a href="/passenger-signup">Register as a Passenger</a>
     </div>
 </div>
 

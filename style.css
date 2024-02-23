@@ -299,6 +299,7 @@ footer {
     margin-bottom: 30px; 
     font-size: 2em;
     color:#40531B;
+    
 }
 
 .form-group {
@@ -361,6 +362,65 @@ footer {
     text-decoration: underline;
       
 }
+
+/*-------------------Sign Up----------------*/
+
+.signup
+{
+    display: grid;
+    place-items: center; /* Shorthand for align-items and justify-items */
+    min-height: 100vh;
+}
+.registration-form {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="date"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"],
+.registration-form input[type="file"],
+.registration-form select,
+.registration-form .register-button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.registration-form .checkbox {
+    margin: 20px 0;
+}
+
+.registration-form .register-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.registration-form .register-button:hover {
+    background-color: #0056b3;
+}
+
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
     .footer-container {
