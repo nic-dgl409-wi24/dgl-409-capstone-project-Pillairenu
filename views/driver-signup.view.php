@@ -1,9 +1,10 @@
 <?php require('partials/head.php');?>
 
 <?php require('partials/main_nav.php');?>
+<?php session_start();?>
 <div class="signup">
     <h2>Driver Sign Up</h2>
-    <form action="/submit-registration" method="POST" enctype="multipart/form-data" class="registration-form">
+    <form action="/registration-controller" method="POST" enctype="multipart/form-data" class="registration-form">
 
     <div class="registration-form-group">
     <label for="name">Name:</label>
@@ -55,7 +56,7 @@
         <label for="backgroundCheck">I consent to a background check</label>
     </div>
     </div>
-    <button type="submit" class="signin-btn">Register</button>
+    <button type="submit" class="signin-btn">Next</button>
 </form>
 </div>
 <?php require('partials/footer.php');?>

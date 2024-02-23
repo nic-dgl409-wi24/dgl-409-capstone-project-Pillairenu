@@ -6,7 +6,10 @@ $routes = [
     '/' => 'controllers/index.php',
     '/signin'=>'controllers/signin.php',
     '/driver-signup'=>'controllers/driver-signup.php',
-    '/passenger-signup'=>'controllers/passenger-signup.php'
+    '/passenger-signup'=>'controllers/passenger-signup.php',
+    '/vehicle-registration'=>'controllers/vehicle-registration.php',
+    '/registration-controller'=>'controllers/registration-controller.php',
+    '/submitDriverRegistrationForm'=>'controllers/submitDriverRegistrationForm.php'
 ];
 
 //function to handle routing
