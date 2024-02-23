@@ -370,24 +370,30 @@ footer {
     display: grid;
     place-items: center; /* Shorthand for align-items and justify-items */
     min-height: 100vh;
+    padding:5em;
 }
 .registration-form {
     background: white;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
+    
 }
 
-.registration-form h2 {
+.signup h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color:#40531B;
+    
 }
 
 .registration-form label {
     display: block;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .registration-form input[type="text"],
@@ -395,31 +401,26 @@ footer {
 .registration-form input[type="email"],
 .registration-form input[type="tel"],
 .registration-form input[type="password"],
-.registration-form input[type="file"],
 .registration-form select,
 .registration-form .register-button {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    width: 100%; 
+    padding: 10px;
+    border: 2px solid #bdbdbd; 
+    border-radius: 5px; 
 }
 
-.registration-form .checkbox {
-    margin: 20px 0;
+
+.registration-form-group {
+    text-align: left; 
+    margin-bottom: 20px;
+   
+}
+.registration-form-group .checkbox, .upload-file {
+    display:flex;   
+    gap: 5px;
+    align-items: baseline;
 }
 
-.registration-form .register-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.registration-form .register-button:hover {
-    background-color: #0056b3;
-}
 
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
