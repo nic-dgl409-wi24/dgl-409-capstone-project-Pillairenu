@@ -296,61 +296,70 @@ footer {
 
 .signin-container h2 {
     
-    margin-bottom: 30px; /* Increase bottom margin for more space */
-    font-size: 2em; /* Larger font size for the heading */
+    margin-bottom: 30px; 
+    font-size: 2em;
     color:#40531B;
 }
 
 .form-group {
-    text-align: left; /* Align the form group contents to the left */
+    text-align: left; 
     margin-bottom: 20px;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 10px;
-    font-weight: 600; /* Make the label slightly bolder */
+    font-weight: 600; 
 }
 
 .form-group input {
-    width: calc(100% - 20px); /* Adjust input width to fit the container */
+    width: 100%; 
     padding: 10px;
-    border: 2px solid #bdbdbd; /* Slightly thicker border with a lighter shade */
-    border-radius: 5px; /* Rounded corners for the input fields */
-    font-size: 16px; /* Larger font size for readability */
+    border: 2px solid #bdbdbd; 
+    border-radius: 5px; 
+    
 }
 
 .signin-btn {
     margin-top: 30px;
     width: 100%;
-    padding: 12px 0; /* Adjust padding for a better touch area */
-    background-color: #007bff; /* Bright blue for the button */
+    padding: 12px 0;
+    background-color:#EA9010;
     color: white;
     border: none;
-    border-radius: 5px; /* Rounded corners for the button */
+    border-radius: 5px; 
     cursor: pointer;
-    font-size: 16px; /* Increase font size for readability */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: background-color 0.3s; 
 }
 
 .signin-btn:hover {
-    background-color: #0056b3; /* Darker shade of blue on hover */
+    
+    background-color: #c77c15;
 }
 
 .register-links {
-    margin-top: 25px; /* Increase margin top for spacing */
+    margin-top: 25px; 
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.register-links h3
+{
+    color:#40531B;
+    margin-top: 20px; 
+    margin-bottom: 10px; 
 }
 
 .register-links a {
     text-decoration: none;
-    color: #007bff;
+    color: #5454ef;
     margin: 0 5px;
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    
 }
 
 .register-links a:hover {
-    color: #0056b3; /* Darker shade of blue on hover */
     text-decoration: underline;
+      
 }
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
