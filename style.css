@@ -73,6 +73,11 @@ header {
     background-color: #ADE25D;
     color: #40531B;
 }
+.main-navbar {
+    display: grid;
+    place-items: center;
+    padding: 2em 6em;
+}
 
 .navbar {
     display: flex;

@@ -5,9 +5,9 @@
     </a>
     <ul class="navbar-nav">
       
-        <li><a href="#driver">Driver</a></li>
-        <li><a href="#passenger">Passenger</a></li>
-        <li><a href="/signin">Log In</a></li>
+        <li><a href="/#driver">Driver</a></li>
+        <li><a href="/#passenger">Passenger</a></li>
+       
     </ul>
   </nav>
   

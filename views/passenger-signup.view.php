@@ -1,0 +1,61 @@
+<?php require('partials/head.php');?>
+
+<?php require('partials/main_nav.php');?>
+<?php session_start();?>
+<div class="signup">
+    <h2>Passenger Sign Up</h2>
+    <form action="/model/passenger-signup.model.php" method="POST" enctype="multipart/form-data" class="registration-form">
+
+    <div class="registration-form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    </div>
+    <div class="registration-form-group">
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+    </div>
+    <div class="registration-form-group">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+    </div>
+    <div class="registration-form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    </div>
+    <div class="registration-form-group">
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="registration-form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    </div>
+    <div class="registration-form-group upload-file">
+    <label for="profilePhoto">Profile Photo:</label>
+    <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" required>
+    </div>
+    <div class="registration-form-group">
+    <label for="govId">Choose a Government ID:</label>
+    <select id="govId" name="govId" required>
+        <option value="passport">Passport</option>
+        <option value="driving_license">Driving License</option>
+        <option value="national_id">National ID Card</option>
+    </select>
+    </div>
+    <div class="registration-form-group upload-file">
+    <label for="govIdFile">Upload Govt.ID:</label>
+    <input type="file" id="govIdFile" name="govIdFile" accept=".pdf,.jpg,.jpeg,.png" required>
+    </div>
+    <!-- Hidden field for the driver role -->
+    <input type="hidden" name="role" value="passenger">
+    <div class="registration-form-group">
+    
+    </div>
+    <button type="submit" class="signin-btn">Submit</button>
+</form>
+</div>
+<?php require('partials/footer.php');?>
