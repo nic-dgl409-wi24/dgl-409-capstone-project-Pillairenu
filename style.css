@@ -511,6 +511,74 @@ footer {
     display: inline-block;
     vertical-align: middle;
 }
+
+/*-------------------Post a ride----------------*/
+
+.post-ride-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    /* background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.post-ride-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-time-group {
+    display: flex;
+    gap: 20px;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group textarea {
+    resize: vertical; /* Allows vertical resizing, might be useful for additional notes */
+}
+
+.submit-btn {
+    grid-column: span 2; /* Spans across all columns for wider screens */
+    padding: 10px 20px;
+    background-color: #EA9010;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #c77c15;
+}
+
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
     .footer-container {
