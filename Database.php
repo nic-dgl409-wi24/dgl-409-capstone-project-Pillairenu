@@ -5,8 +5,8 @@ $db       = 'rideconnect';             // Name of the database
 $port     = '';                      // Port is usually 8889 in MAMP and 3306 in XAMPP
 $charset  = 'utf8mb4';               // UTF-8 encoding using 4 bytes of data per character
 
-$username = '';         // Enter YOUR username here
-$password = '';         // Enter YOUR password here
+$username = 'nic';         // Enter YOUR username here
+$password = 'niccollege';         // Enter YOUR password here
 
 $options  = [                       
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,

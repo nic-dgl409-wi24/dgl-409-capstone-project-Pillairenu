@@ -10,7 +10,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'vehicleMakeModel' => $_POST['vehicleMakeModel'],
         'vehicleType' => $_POST['vehicleType'],
         'licensePlate' => $_POST['licensePlate'],
-        
+        'insuranceDoc' => $_FILES['insuranceDoc']['name'],
+        'vehiclePhoto' => $_FILES['vehiclePhoto']['name'],
+        'backgroundCheckConsent' => isset($_POST['backgroundCheck']) ? 'Yes' : 'No'
     ];
 
     // $drivinginfo = $_SESSION['driving_info'];
