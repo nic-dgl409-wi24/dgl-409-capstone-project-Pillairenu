@@ -61,7 +61,9 @@ try {
  
          $pdo->commit();
         
-    echo "Passenger registration successful.";
+         //echo "Passenger registration successful.";
+        header("Location: /signin");
+        exit();
 } catch (Exception $e) {
     $pdo->rollBack();
     echo "Registration failed: " . $e->getMessage();

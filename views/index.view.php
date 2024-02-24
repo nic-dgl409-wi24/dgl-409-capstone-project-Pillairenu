@@ -29,7 +29,7 @@
                     <span> Fewer cars on the road means less traffic</span>
                 </div>
             </div>
-            <button onclick="location.href='signup-page-url.html'" class="signup-btn">Sign Up Now</button>
+            <button onclick="location.href='/driver-signup'" class="signup-btn">Sign Up Now</button>
         </div>
     </div>
 </section>
@@ -60,7 +60,7 @@
                     <span> Priority on safety of passengers</span>
                 </div>
             </div>
-            <button onclick="location.href='signup-page-url.html'" class="signup-btn">Sign Up Now</button>
+            <button onclick="location.href='/passenger-signup'" class="signup-btn">Sign Up Now</button>
         </div>
         
     </div>

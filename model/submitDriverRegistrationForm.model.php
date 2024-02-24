@@ -89,6 +89,9 @@ if (isset($_SESSION['personal_info'], $_SESSION['driving_info'])) {
  
          // Clear session variables
          unset($_SESSION['personal_info'], $_SESSION['driver_info']);
+
+         header("Location: /signin");
+         exit();
     } catch (Exception $e) {
         $pdo->rollBack();
         echo "Registration failed: " . $e->getMessage();
