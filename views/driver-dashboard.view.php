@@ -36,11 +36,11 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
         <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
     </div>
     <div class="dashboard-cards">
-        <a href="/post-a-ride.php" class="dashboard-card"> <!-- Update href as needed -->
+        <a href="/post-a-ride" class="dashboard-card"> <!-- Update href as needed -->
         
             <h3>Post a Ride</h3>
         </a>
-        <a href="/post-an-event.php" class="dashboard-card"> <!-- Update href as needed -->
+        <a href="/post-an-event" class="dashboard-card"> <!-- Update href as needed -->
             <h3>Post an Event</h3>
         </a>
     </div>
