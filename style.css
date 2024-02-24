@@ -425,8 +425,17 @@ footer {
     gap: 5px;
     align-items: baseline;
 }
-
-
+.signin-btn img {
+    
+    width:40px;
+}
+.signup-btn
+{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10px;
+}
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
     .footer-container {

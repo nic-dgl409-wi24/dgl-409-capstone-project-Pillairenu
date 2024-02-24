@@ -3,9 +3,10 @@
 <?php require('partials/main_nav.php');?>
 <?php session_start();?>
 <div class="signup">
-    <h2>Driver Sign Up</h2>
+   
     <form action="/registration-controller" method="POST" enctype="multipart/form-data" class="registration-form">
-
+    <h2>Driver Sign Up</h2>
+    
     <div class="registration-form-group">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
@@ -53,7 +54,11 @@
     <div class="registration-form-group">
     
     </div>
-    <button type="submit" class="signin-btn">Next</button>
+    <button type="submit" class="signin-btn signup-btn">
+        Next
+        <img src="images/NEXT.png" alt="next button">
+    </button>
+
 </form>
 </div>
 <?php require('partials/footer.php');?>
