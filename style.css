@@ -458,7 +458,7 @@ footer {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
     display:flex;
     align-items: center;
-    padding-left:2em;
+    padding-left:8em;
     
 }
 
@@ -466,40 +466,41 @@ footer {
     width: 80px; /* Adjust based on your preference */
    
     border-radius: 50%; /* Circular profile pictures */
-    margin-right: 15px;
-    vertical-align: middle;
+    
 }
 
 .driver-dashboard .user-info span {
-    vertical-align: middle;
-    font-size: 18px;
-    margin-right: 20px; /* Space before the edge */
+    font-size: 1.5em;
+    font-weight: 600;
+    color:#40531B;
+    font-family: "Merriweather", serif;
 }
 
 /* Dashboard cards styling */
 .dashboard-cards {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between cards */
-    padding: 40px 0; /* Padding around the cards */
+    gap: 50px; /* Space between cards */
+    padding: 10em; /* Padding around the cards */
+    
 }
 
 .dashboard-card {
-    width: 200px; /* Adjust based on your preference */
+    width: 200px; 
     height: 200px;
-    background-color: #ffffff; /* White background for the cards */
-    color: #333; /* Dark text color for visibility */
+    background-color: #ffffff; 
+    color: #333; 
     text-align: center;
-    line-height: 200px; /* Vertically center the text inside the card */
-    border-radius: 10px; /* Rounded corners for the cards */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-    text-decoration: none; /* Remove underline from links */
+    line-height: 200px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    transition: all 0.3s ease; 
+    text-decoration: none; 
 }
 
 .dashboard-card:hover {
-    transform: translateY(-5px); /* Lift card on hover */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); 
 }
 
 .dashboard-card h3 {

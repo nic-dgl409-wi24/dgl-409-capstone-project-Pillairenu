@@ -33,7 +33,7 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
 <div class="driver-dashboard">
     <div class="user-info">
         <img src="<?php echo htmlspecialchars($profilePicPath); ?>" alt="Profile Picture" class="profile-pic">
-        <span><?php echo "Welcome ".htmlspecialchars($user['name']); ?></span>
+        <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
     </div>
     <div class="dashboard-cards">
         <a href="/post-a-ride.php" class="dashboard-card"> <!-- Update href as needed -->
