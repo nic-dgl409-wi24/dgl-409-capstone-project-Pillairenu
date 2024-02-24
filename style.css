@@ -486,17 +486,18 @@ footer {
 }
 
 .dashboard-card {
-    width: 200px; 
-    height: 200px;
-    background-color: #ffffff; 
+    width: 230px; 
+    height: 230px;
+    background-color:#ADE25D;
     color: #333; 
     text-align: center;
-    line-height: 200px; 
+    line-height: 230px;
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
     transition: all 0.3s ease; 
     text-decoration: none; 
 }
+
 
 .dashboard-card:hover {
     transform: translateY(-5px); 
