@@ -448,6 +448,67 @@ footer {
     align-items:center;
     gap: 10px;
 }
+
+
+/*-------------------Driver Dashboard----------------*/
+/* User info styling */
+.driver-dashboard .user-info {
+    
+    background-color: #ffffff; /* White background for the user info bar */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    display:flex;
+    align-items: center;
+    padding-left:2em;
+    
+}
+
+.driver-dashboard .user-info img.profile-pic {
+    width: 80px; /* Adjust based on your preference */
+   
+    border-radius: 50%; /* Circular profile pictures */
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.driver-dashboard .user-info span {
+    vertical-align: middle;
+    font-size: 18px;
+    margin-right: 20px; /* Space before the edge */
+}
+
+/* Dashboard cards styling */
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    padding: 40px 0; /* Padding around the cards */
+}
+
+.dashboard-card {
+    width: 200px; /* Adjust based on your preference */
+    height: 200px;
+    background-color: #ffffff; /* White background for the cards */
+    color: #333; /* Dark text color for visibility */
+    text-align: center;
+    line-height: 200px; /* Vertically center the text inside the card */
+    border-radius: 10px; /* Rounded corners for the cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+}
+
+.dashboard-card h3 {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
     .footer-container {

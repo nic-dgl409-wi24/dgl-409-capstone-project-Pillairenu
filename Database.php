@@ -21,7 +21,7 @@ try {                                                               // Try follo
      // Perform a simple query to test the connection
      $query = $pdo->query('SELECT 1');
      if ($query) {
-         echo "Database connection is working.";
+         //echo "Database connection is working.";
      } else {
          echo "Failed to connect to the database.";
      }
