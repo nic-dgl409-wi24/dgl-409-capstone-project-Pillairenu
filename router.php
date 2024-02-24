@@ -9,7 +9,10 @@ $routes = [
     '/passenger-signup'=>'controllers/passenger-signup.php',
     '/vehicle-registration'=>'controllers/vehicle-registration.php',
     '/registration-controller'=>'controllers/registration-controller.php',
-    '/submitDriverRegistrationForm'=>'controllers/submitDriverRegistrationForm.php'
+    '/submitDriverRegistrationForm'=>'controllers/submitDriverRegistrationForm.php',
+    '/driver-dashboard'=>'controllers/driver-dashboard.php',
+    '/passenger-dashboard'=>'controllers/passenger-dashboard.php',
+    '/admin-dashboard'=>'controllers/admin-dashboard.php'
 ];
 
 //function to handle routing

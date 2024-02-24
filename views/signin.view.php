@@ -4,7 +4,7 @@
 <div class="sigin">
 <div class="signin-container">
     <h2>Sign In</h2>
-    <form action="/submit-your-login-form-endpoint" method="POST">
+    <form action="/model/signin-model.php" method="POST">
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
