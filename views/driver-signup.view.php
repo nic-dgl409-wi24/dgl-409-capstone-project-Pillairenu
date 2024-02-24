@@ -6,7 +6,7 @@
    
     <form action="/registration-controller" method="POST" enctype="multipart/form-data" class="registration-form">
     <h2>Driver Sign Up</h2>
-    
+   
     <div class="registration-form-group">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>

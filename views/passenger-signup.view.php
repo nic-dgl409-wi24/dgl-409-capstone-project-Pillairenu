@@ -3,9 +3,9 @@
 <?php require('partials/main_nav.php');?>
 <?php session_start();?>
 <div class="signup">
-    <h2>Passenger Sign Up</h2>
+    
     <form action="/model/passenger-signup.model.php" method="POST" enctype="multipart/form-data" class="registration-form">
-
+    <h2>Passenger Sign Up</h2>
     <div class="registration-form-group">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>

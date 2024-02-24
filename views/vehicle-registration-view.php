@@ -23,17 +23,18 @@
 
 
 <div class="signup">
-    <h2>Driver Vehicle Information</h2>
+    
     <form action="/submitDriverRegistrationForm" method="POST" enctype="multipart/form-data" class="registration-form">
-
+    <h2> Driving & Vehicle Information</h2>
     <!-- Driving Information -->
-    <div class="registration-form-group">
-        <label for="licenseUpload">License (upload file):</label>
-        <input type="file" id="licenseUpload" name="licenseUpload" required>
-    </div>
+    
     <div class="registration-form-group">
         <label for="drivingExperience">Years of Driving Experience:</label>
         <input type="number" id="drivingExperience" name="drivingExperience" required>
+    </div>
+    <div class="registration-form-group upload-file">
+        <label for="licenseUpload">License:</label>
+        <input type="file" id="licenseUpload" name="licenseUpload" required>
     </div>
 
     <!-- Vehicle Information -->
@@ -49,17 +50,17 @@
         <label for="licensePlate">License Plate No.:</label>
         <input type="text" id="licensePlate" name="licensePlate" required>
     </div>
-    <div class="registration-form-group">
-        <label for="insuranceDoc">Vehicle Insurance Document (upload):</label>
+    <div class="registration-form-group upload-file">
+        <label for="insuranceDoc">Vehicle Insurance:</label>
         <input type="file" id="insuranceDoc" name="insuranceDoc" required>
     </div>
-    <div class="registration-form-group">
-        <label for="vehiclePhoto">Vehicle Photo (upload):</label>
+    <div class="registration-form-group upload-file">
+        <label for="vehiclePhoto">Vehicle Photo:</label>
         <input type="file" id="vehiclePhoto" name="vehiclePhoto" required>
     </div>
     <!-- Hidden field for the driver role -->
     <input type="hidden" name="role" value="driver">
-    <div class="checkbox">
+    <div class="checkbox upload-file">
         <input type="checkbox" id="backgroundCheck" name="backgroundCheck" required>
         <label for="backgroundCheck">I consent to a background check</label>
     </div>
