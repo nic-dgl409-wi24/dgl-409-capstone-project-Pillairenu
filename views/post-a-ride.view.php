@@ -1,11 +1,13 @@
 <?php require('partials/head.php');?>
 
 <?php require('partials/main_nav.php');
-session_start();?>
+session_start();
+
+?>
  <div class="post-ride-container">
     <h2 class="page-title">Post a Ride</h2>
     <hr>
-    <form action="/submit-ride.php" method="POST" class="post-ride-form">
+    <form action="/model/post-a-ride.model.php" method="POST" class="post-ride-form">
         <div class="input-group">
             <label for="departure">Departure:</label>
             <input type="text" id="departure" name="departure" placeholder="Enter departure location">
