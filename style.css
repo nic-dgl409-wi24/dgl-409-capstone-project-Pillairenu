@@ -516,22 +516,32 @@ footer {
 
 .post-ride-container {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    /* background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
+    margin: 0 auto; /* This centers the container */
+    padding-top: 6em;
+    padding-bottom: 6em;
+   
 }
 
 .page-title {
-    text-align: center;
-    margin-bottom: 30px;
+    text-align: left;
+    
+    color: #40531B;
+    font-size: 2.5rem;
 }
-
+hr {
+    border: 0; 
+    height: 5px; 
+    width:20%;
+    border-radius:2px;
+    background-color:#CFFFB3;
+    margin-top: 20px; 
+    margin-bottom: 40px; /* Space below the hr */
+}
 .post-ride-form {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 70px;
+    align-items: center;
 }
 
 .input-group {
@@ -563,7 +573,7 @@ footer {
 }
 
 .submit-btn {
-    grid-column: span 2; /* Spans across all columns for wider screens */
+    /* grid-column: span 2;  */
     padding: 10px 20px;
     background-color: #EA9010;
     color: #fff;

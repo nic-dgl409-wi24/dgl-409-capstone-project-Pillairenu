@@ -4,6 +4,7 @@
 session_start();?>
  <div class="post-ride-container">
     <h2 class="page-title">Post a Ride</h2>
+    <hr>
     <form action="/submit-ride.php" method="POST" class="post-ride-form">
         <div class="input-group">
             <label for="departure">Departure:</label>
