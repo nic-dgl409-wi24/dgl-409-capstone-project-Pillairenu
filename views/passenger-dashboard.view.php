@@ -38,12 +38,12 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
         <a href="/logout">Logout</a>
     </div>
     <div class="dashboard-cards">
-        <a href="/post-a-ride" class="dashboard-card"> <!-- Update href as needed -->
+        <a href="/find-rides" class="dashboard-card"> <!-- Update href as needed -->
         
             <h3>Find a Ride</h3>
         </a>
-        <a href="/post-an-event" class="dashboard-card"> <!-- Update href as needed -->
-            <h3>Book a Ride</h3>
+        <a href="/bookings" class="dashboard-card"> <!-- Update href as needed -->
+            <h3>Bookings</h3>
         </a>
     </div>
 </div>

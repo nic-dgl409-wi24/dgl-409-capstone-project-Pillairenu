@@ -470,7 +470,7 @@ footer {
 }
 
 .driver-dashboard .user-info span , .user-info a {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 600;
     color:#40531B;
     font-family: "Merriweather", serif;
@@ -478,7 +478,7 @@ footer {
 .user-info a
 {
     text-decoration: none;
-    margin-left: 60%;
+    margin-left: 64%;
 }
 /* Dashboard cards styling */
 .dashboard-cards {
@@ -591,6 +591,74 @@ hr {
 
 .submit-btn:hover {
     background-color: #c77c15;
+}
+
+/*-------------------Find  a ride----------------*/
+
+.rides-listing
+{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3em;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.rides-listing .ride {
+    /* display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #cfffb3;
+    border-radius: 5px;
+    margin-top: 10px;
+    gap:30px; */
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto; 
+    align-items: center;
+    gap: 20px; 
+    padding: 10px;
+    background-color: #cfffb3;
+    border-radius: 5px;
+}
+
+
+.ride .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+.ride-details, .ride-location {
+    display: flex;
+    flex-direction: column;
+}
+
+.ride-details p, .rider-info h4 {
+    margin: 0; /* Removes default margin for a cleaner look */
+}
+
+
+.ride-details h4 {
+    margin: 0;
+}
+
+.ride-details p {
+    margin: 5px 0;
+}
+
+.ride button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color:#EA9010;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width:40%;
+    
 }
 
 /*-------------------Media query----------------*/

@@ -14,7 +14,8 @@ $routes = [
     '/passenger-dashboard'=>'controllers/passenger-dashboard.php',
     '/admin-dashboard'=>'controllers/admin-dashboard.php',
     '/post-a-ride'=>'controllers/post-a-ride.php',
-    '/logout'=>'controllers/logout.php'
+    '/logout'=>'controllers/logout.php',
+    '/find-rides'=>'controllers/find-rides.php'
     
 ];
 
