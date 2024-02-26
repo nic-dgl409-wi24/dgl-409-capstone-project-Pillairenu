@@ -13,7 +13,8 @@ $routes = [
     '/driver-dashboard'=>'controllers/driver-dashboard.php',
     '/passenger-dashboard'=>'controllers/passenger-dashboard.php',
     '/admin-dashboard'=>'controllers/admin-dashboard.php',
-    '/post-a-ride'=>'controllers/post-a-ride.php'
+    '/post-a-ride'=>'controllers/post-a-ride.php',
+    '/logout'=>'controllers/logout.php'
     
 ];
 

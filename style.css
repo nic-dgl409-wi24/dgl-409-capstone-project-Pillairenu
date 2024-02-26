@@ -469,13 +469,17 @@ footer {
     
 }
 
-.driver-dashboard .user-info span {
+.driver-dashboard .user-info span , .user-info a {
     font-size: 1.5em;
     font-weight: 600;
     color:#40531B;
     font-family: "Merriweather", serif;
 }
-
+.user-info a
+{
+    text-decoration: none;
+    margin-left: 60%;
+}
 /* Dashboard cards styling */
 .dashboard-cards {
     display: flex;

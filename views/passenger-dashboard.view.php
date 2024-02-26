@@ -35,6 +35,7 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
     <div class="user-info">
         <img src="<?php echo $defaultProfilePic; ?>" alt="Profile Picture" class="profile-pic">
         <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
+        <a href="/logout">Logout</a>
     </div>
     <div class="dashboard-cards">
         <a href="/post-a-ride" class="dashboard-card"> <!-- Update href as needed -->
