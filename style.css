@@ -277,6 +277,8 @@ footer {
 .home-page-content
 {
     background-color:#F9F9F9;
+    margin-top:50px;
+    margin-bottom: 50px;
 }
 
 /*-------------------Sign In----------------*/
@@ -683,6 +685,29 @@ hr {
 
 .ride-details p {
     margin: 5px 0;
+}
+/*-------------------search---------------*/
+.search-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-form input[type="text"] {
+    margin: 0 5px;
+    padding: 8px;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
 }
 
 /*-------------------Media query----------------*/

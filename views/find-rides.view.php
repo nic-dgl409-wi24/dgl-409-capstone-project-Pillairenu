@@ -22,7 +22,11 @@ try {
     die("Error fetching rides: " . $e->getMessage());
 }
 ?>
-
+<!-- <div class="search-container">
+    <input type="text" id="departureSearch" placeholder="Departure location">
+    <input type="text" id="arrivalSearch" placeholder="Arrival location">
+    <button id="searchBtn">Search</button>
+</div> -->
 <div class="rides-listing">
     <?php while ($ride = $stmt->fetch()): ?>
         <div class="ride">

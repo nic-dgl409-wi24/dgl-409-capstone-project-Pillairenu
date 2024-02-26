@@ -3,6 +3,7 @@
 <?php require('partials/nav.php');?>
 
 <div class="home-page-content">
+
 <section class="ride-share-info" id="driver">
     <div class="container-1">
         <div class="image-side">
