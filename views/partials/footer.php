@@ -38,6 +38,7 @@
           <p><small>&copy; 2024 RideConnect. All rights reserved.</small></p>
         </div>
     </footer>
-
+ <!-- JavaScript file  -->
+ <script src="script.js"></script>
 </body>
 </html>
