@@ -48,10 +48,10 @@ session_start();
         </div>
         <button type="submit" class="submit-btn">Post Ride</button>
     </form>
-    <section id="map-container">
-                <!-- The map will be rendered here -->
-    </section>
-          
+    <div id="error-message"></div>
+
+    
+    <div style="width: 640px; height: 480px" id="mapContainer"></div>
 </div>
 
 
