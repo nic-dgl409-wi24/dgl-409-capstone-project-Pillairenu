@@ -7,8 +7,9 @@ session_start();
  <div class="post-ride-container">
     <h2 class="page-title">Post a Ride</h2>
     <hr>
+    <div class="container">
     <form action="/model/post-a-ride.model.php" method="POST" class="post-ride-form">
-  
+        
         <div class="input-group">
             <label for="departure">Departure:</label>
             <input type="text" id="departure" name="departure" placeholder="Enter departure location">
@@ -17,7 +18,7 @@ session_start();
             <label for="arrival">Arrival:</label>
             <input type="text" id="arrival" name="arrival" placeholder="Enter arrival location">
         </div>
-   
+        
         <div class="date-time-group">
             <div class="input-group">
                 <label for="date">Date:</label>
@@ -46,11 +47,13 @@ session_start();
             <label for="notes">Additional Notes:</label>
             <textarea id="notes" name="notes" placeholder="Any additional information..."></textarea>
         </div>
+        
         <button type="submit" class="submit-btn">Post Ride</button>
     </form>
-    
-    
     <div id="mapContainer"></div>
+</div>
+    
+    
 </div>
 
 
