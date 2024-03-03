@@ -48,10 +48,9 @@ session_start();
         </div>
         <button type="submit" class="submit-btn">Post Ride</button>
     </form>
-    <div id="error-message"></div>
-
     
-    <div style="width: 640px; height: 480px" id="mapContainer"></div>
+    
+    <div id="mapContainer"></div>
 </div>
 
 
