@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function calculateAndDisplayRoute() {
         const geocoder = platform.getSearchService();
 
-        let departureAddress = document.getElementById('departure').value + ', Canada'+',BC'+',[Comox, Courtenay]'; // Append ', Canada' to limit to Canada
-            let arrivalAddress = document.getElementById('arrival').value + ', Canada'+',BC'+',[Comox, Courtenay]'; // Append ', Canada' to limit to Canada
+            let departureAddress = document.getElementById('departure').value + ', Canada'+',BC'+',Comox Valley'; // Append ', Canada' to limit to Canada
+            let arrivalAddress = document.getElementById('arrival').value + ', Canada'+',BC'+',Comox Valley'; // Append ', Canada' to limit to Canada
 
         // Ensure both departure and arrival addresses have been entered
         if (!departureAddress.trim() || !arrivalAddress.trim()) {
