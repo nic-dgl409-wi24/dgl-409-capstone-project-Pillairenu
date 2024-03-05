@@ -112,7 +112,36 @@ header {
     font-family: "Noto Sans", sans-serif;
     font-weight: bolder;
     font-size: 1.1rem;
+    position: relative; /* Needed for positioning the pseudo-elements */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
 
+.navbar-nav li a::before,
+.navbar-nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust based on your layout */
+    left: 0;
+    right: 0;
+    height: 2px; /* Height of the underline */
+    background-color: #40531B; /* Color of the underline */
+    transform: scaleX(0); /* Start with no width */
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
+}
+
+.navbar-nav li a::before {
+    transform-origin: right;
+}
+
+.navbar-nav li a::after {
+    transform-origin: left;
+}
+
+.navbar-nav li a:hover::before,
+.navbar-nav li a:hover::after,
+.navbar-nav li a:focus::before,
+.navbar-nav li a:focus::after { /* Apply to both hover and focus for accessibility */
+    transform: scaleX(1); /* Full width */
 }
 
 .hero {
@@ -145,13 +174,16 @@ header {
 
 .hero-image img {
     width: 100%;
-    height: auto;
+    
 }
 .hamburger {
     display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
    
 }
 
@@ -740,7 +772,7 @@ hr {
     margin-top: 20px;
 }
 /*-------------------Media query----------------*/
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 768px) {
 
     .navbar {
         flex-wrap: wrap;
@@ -763,11 +795,12 @@ hr {
     }
     .navbar-nav.show {
         display: flex;
-        align-items: flex-start;
+        justify-content: center;
    
         padding-left: 3.5em;
-}
     }
+
+   
     .footer-container {
         grid-template-columns: 1fr;
 
@@ -783,5 +816,30 @@ hr {
 
     .image-side img {
         margin-bottom: 20px;
+    }
+
+    .hero {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 1.5em; /* Adjust padding for smaller screens */
+        text-align: center; /* Center the text for smaller screens */
+    }
+
+    .hero-text {
+        width: 100%; /* Use full width for text */
+        padding: 0 20px; /* Adjust padding for readability */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Adjust headline size for smaller screens */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Adjust paragraph text size for smaller screens */
+    }
+
+    .hero-image {
+        width: 80%; /* Adjust image width to fit smaller screens */
+        margin: 20px auto; /* Center the image with automatic margins */
+        display: block; /* Ensure the image is block level for margin to work */
     }
 }
