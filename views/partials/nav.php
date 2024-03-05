@@ -12,6 +12,11 @@
     <a href="/" class="navbar-logo">
         <img src="images/logo-3.png" alt="Logo" > 
     </a>
+    <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <ul class="navbar-nav">
       
         <li><a href="#driver">Driver</a></li>

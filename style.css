@@ -147,7 +147,20 @@ header {
     width: 100%;
     height: auto;
 }
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+   
+}
 
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #40531B;
+}
 
 /* ------------Footer----------- */
 
@@ -727,7 +740,34 @@ hr {
     margin-top: 20px;
 }
 /*-------------------Media query----------------*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1025px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 1em;
+    }
+
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-nav li {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    .navbar-nav.show {
+        display: flex;
+        align-items: flex-start;
+   
+        padding-left: 3.5em;
+}
+    }
     .footer-container {
         grid-template-columns: 1fr;
 

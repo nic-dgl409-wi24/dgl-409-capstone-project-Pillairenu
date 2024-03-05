@@ -2,6 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.navbar-nav');
+
+    hamburger.addEventListener('click', function () {
+        navMenu.classList.toggle('show');
+    });
+
     // HERE Maps API initialization
     var platform = new H.service.Platform({
         'apikey': 'bc1jXDa0GtxqIOL1LvdT7FAWzUdaoZ24NYOQuTR3NtY'
