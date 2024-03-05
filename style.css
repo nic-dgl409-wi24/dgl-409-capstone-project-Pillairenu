@@ -345,7 +345,7 @@ footer {
      min-height: 100vh;
      flex-direction: row-reverse;
      justify-content: center;
-    padding: 8em;
+    padding: 6em;
 }
 .sigin-image-side  {
     
@@ -359,7 +359,7 @@ footer {
 }
 .signin-container {
     background: white;
-    padding: 40px;
+    /* padding: 40px; */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
     width: 50%;
@@ -368,10 +368,38 @@ footer {
     
     
 }
+.signin-form
+{
+    padding:2em;
+}
+.top {
+    background-color: #c4d3ec;
+    background: linear-gradient(to left, 
+    rgba(193, 236, 123, 0.6),  /* Lighter shade */
+    rgba(173, 226, 93, 0.6),   /* Original color */
+    rgba(153, 216, 63, 0.6));  /* Slightly darker shade */   display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    border-radius: 0 0 75px 75px;
+}
+
+.top:hover {
+    transition: .4s;
+    border-radius: 0;
+    width: 100%;
+}
+
+.top:not(:hover) {
+    transition: .4s;
+    border-radius: 0 0 75px 75px;
+    width: 100%;
+}
 
 .signin-container h2 {
     
     text-align: center;
+    margin-top:20px;
     margin-bottom: 30px;
     font-size: 2em;
     color:#40531B;

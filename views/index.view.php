@@ -7,7 +7,7 @@
 <section class="ride-share-info" id="driver">
     <div class="container-1">
         <div class="image-side">
-            <img src="images/shareride.png" alt="Share Your Ride">
+            <img src="images/car.png" alt="Share Your Ride">
         </div>
         <div class="text-side">
             <h2>Why Share Your Ride?</h2>
@@ -37,7 +37,7 @@
 <section class="ride-share-info" id="passenger">
     <div class="container-1">
     <div class="image-side">
-            <img src="images/bookride.png" alt="Share Your Ride">
+            <img src="images/sigup-person.png" alt="Share Your Ride">
         </div>
         <div class="text-side">
             <h2>Why Book a Ride with Us?</h2>
