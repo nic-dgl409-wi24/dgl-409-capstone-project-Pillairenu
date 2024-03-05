@@ -371,6 +371,7 @@ footer {
 .signin-form
 {
     padding:2em;
+    margin-top:30px;
 }
 .top {
     background-color: #c4d3ec;
@@ -477,6 +478,8 @@ footer {
     place-items: center; /* Shorthand for align-items and justify-items */
     min-height: 100vh;
     padding:5em;
+    max-width: 800px;
+    margin:0 auto;
 }
 .registration-form {
     background: white;
@@ -928,5 +931,13 @@ hr {
 }
 .signin-container {
     width:100%
+}
+.signup {
+    padding: 2em; /* Reduced padding */
+}
+
+.registration-form {
+    padding: 20px; /* Reduced padding */
+    max-width: 80%; /* Allows some space on very small screens */
 }
 }

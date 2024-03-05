@@ -2,6 +2,7 @@
 
 <?php require('partials/main_nav.php');?>
 <?php session_start();?>
+
 <div class="signup">
    
     <form action="/registration-controller" method="POST" enctype="multipart/form-data" class="registration-form">
@@ -60,5 +61,7 @@
     </button>
 
 </form>
+
+
 </div>
 <?php require('partials/footer.php');?>
