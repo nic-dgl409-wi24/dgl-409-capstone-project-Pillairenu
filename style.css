@@ -70,7 +70,7 @@ h6 {
 /*----------- Header and Nav of home page---------- */
 header {
 
-    background-color: #CFFFB3;
+    background-color: rgba(173, 226, 93, 0.6);
     color: #40531B;
 }
 .main-navbar {
@@ -257,12 +257,14 @@ footer {
     max-width: 70%;
     margin: 0 auto;
     /* padding: 20px 20px; */
-    background-color: #EAEFBD;
+    /* background-color: #EAEFBD; */
     padding: 3em;
     border-radius: 1em;
-	box-shadow: 1.5em 1.5em 1px #ADE25D;
+	box-shadow: 
+    1.5em 1.5em 1px rgba(173, 226, 93, 0.6), /* Primary shadow */
+    0 0 5px rgba(0, 0, 0, 0.1), /* Light shadow on one side */
+    0 0 5px rgba(0, 0, 0, 0.1); /* Light shadow on another side */
 }
-
 .image-side  {
     
     width:50%
