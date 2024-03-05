@@ -253,7 +253,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
+    max-width: 70%;
     margin: 0 auto;
     /* padding: 20px 20px; */
     background-color: #EAEFBD;
@@ -262,14 +262,18 @@ footer {
 	box-shadow: 1.5em 1.5em 1px #ADE25D;
 }
 
-.image-side img {
-    max-width: 80%;
-    height: auto;
+.image-side  {
+    
+    width:50%
    
 }
-
+.image-side img {
+    width: 100%;
+    
+   
+}
 .text-side {
-    max-width: 50%;
+    width:50%
 }
 
 .text-side h2 {
@@ -842,4 +846,28 @@ hr {
         margin: 20px auto; /* Center the image with automatic margins */
         display: block; /* Ensure the image is block level for margin to work */
     }
+    .container-1 {
+        flex-direction: column; /* Stack elements vertically */
+        max-width: 80%;
+        box-shadow: 0.5em 0.5em 1px #ADE25D; /* Optionally adjust the shadow for a less dramatic effect */
+        
+    
+    }
+
+    .image-side, .text-side {
+        width: 100%; /* Both elements take full width */
+        
+    }
+
+    /* Optionally adjust image sizes if necessary */
+    .image-side img {
+        width: 100%; /* Ensure image is responsive */
+        max-width: 100%; /* Ensure image does not exceed its container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+.footer-bottom {
+    margin-left:0;
+  
+}
 }
