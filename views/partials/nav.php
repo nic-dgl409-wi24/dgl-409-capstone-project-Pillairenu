@@ -10,7 +10,7 @@
     </nav> -->
     <nav class="navbar">
     <a href="/" class="navbar-logo">
-        <img src="images/logo-2.png" alt="Logo" > 
+        <img src="images/logo-3.png" alt="Logo" > 
     </a>
     <ul class="navbar-nav">
       
