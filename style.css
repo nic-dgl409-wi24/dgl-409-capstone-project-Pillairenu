@@ -803,7 +803,7 @@ hr {
    
     .footer-container {
         grid-template-columns: 1fr;
-
+        justify-items: start;
     }
     .container {
         flex-direction: column;
