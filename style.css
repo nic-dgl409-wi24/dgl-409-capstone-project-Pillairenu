@@ -70,7 +70,7 @@ h6 {
 /*----------- Header and Nav of home page---------- */
 header {
 
-    background-color: #ADE25D;
+    background-color: #CFFFB3;
     color: #40531B;
 }
 .main-navbar {
@@ -235,8 +235,9 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-left: 4rem;
+    
 }
 
 
@@ -280,7 +281,8 @@ footer {
     margin-bottom: 20px;
     font-family: "Merriweather", serif;
     color: #40531B;
-    font-size: bold;
+    font-size: bolder;
+    font-size: 2rem;
 }
 
 .text-side p {
