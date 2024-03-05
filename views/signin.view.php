@@ -21,6 +21,9 @@
         <a href="/passenger-signup">Register as a Passenger</a>
     </div>
 </div>
+<div class="sigin-image-side">
+            <img src="images/siginin.png" alt="Share Your Ride">
+</div>
 
 </div>
 <?php require('partials/footer.php');?>

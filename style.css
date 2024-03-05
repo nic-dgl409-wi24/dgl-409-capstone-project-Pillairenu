@@ -257,7 +257,7 @@ footer {
     max-width: 70%;
     margin: 0 auto;
     /* padding: 20px 20px; */
-    /* background-color: #EAEFBD; */
+    background-color: #f3f9dc;
     padding: 3em;
     border-radius: 1em;
 	box-shadow: 
@@ -341,16 +341,28 @@ footer {
 
 .sigin
 {
-    display: grid;
-    place-items: center; /* Shorthand for align-items and justify-items */
-    min-height: 100vh;
+    display: flex;
+     min-height: 100vh;
+     flex-direction: row-reverse;
+     justify-content: center;
+    padding: 8em;
+}
+.sigin-image-side  {
+    
+    width:50%
+   
+}
+.sigin-image-side img {
+    width: 100%;
+    
+   
 }
 .signin-container {
     background: white;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
-    width: 100%;
+    width: 50%;
     max-width: 450px; 
     text-align: center; 
     
@@ -812,10 +824,12 @@ hr {
     .footer-container {
         grid-template-columns: 1fr;
         justify-items: start;
+        gap: 30px;
     }
     .container {
         flex-direction: column;
         text-align: center;
+        
     }
 
     .image-side, .text-side {
@@ -853,9 +867,8 @@ hr {
     .container-1 {
         flex-direction: column; /* Stack elements vertically */
         max-width: 80%;
-        box-shadow: 0.5em 0.5em 1px #ADE25D; /* Optionally adjust the shadow for a less dramatic effect */
-        
-    
+       
+       
     }
 
     .image-side, .text-side {
@@ -873,5 +886,19 @@ hr {
 .footer-bottom {
     margin-left:0;
   
+}
+.sigin
+{
+    
+     flex-direction: column-reverse;
+     align-items: center;
+}
+.sigin-image-side  {
+    
+    width:100%
+   
+}
+.signin-container {
+    width:100%
 }
 }
