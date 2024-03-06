@@ -2,12 +2,10 @@
 
 <?php require('partials/main_nav.php');?>
 <?php session_start();?>
-
+<div class="signup-container">
 <div class="signup">
    
     <form action="/registration-controller" method="POST" enctype="multipart/form-data" class="registration-form">
-    <h2>Driver Sign Up</h2>
-   
     <div class="registration-form-group">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
@@ -55,13 +53,21 @@
     <div class="registration-form-group">
     
     </div>
-    <button type="submit" class="signin-btn signup-btn">
-        Next
-        <img src="images/NEXT.png" alt="next button">
-    </button>
-
+    <div  class="group">
+        <a href="/signin">Sign in instead</a>
+        
+        <button type="submit" class="signin-btn signup-btn">
+            Next  
+        </button>
+</div> 
+    
 </form>
 
-
+</div>
+<div class="signup-image">
+    
+    <!-- <img src="images/signup-2.png" alt="Share Your Ride"> -->
+    <h1>Create your RideConnect Driver's Account</h1>
+</div>
 </div>
 <?php require('partials/footer.php');?>
