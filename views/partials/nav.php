@@ -21,14 +21,14 @@
       
         <li><a href="#driver">Driver</a></li>
         <li><a href="#passenger">Passenger</a></li>
-        <li><a href="/signin">Log In</a></li>
+        <li><a href="/signin">Sign In</a></li>
     </ul>
   </nav>
     <div class="hero">
     <div class="hero-text">
             <!-- Hero text -->
             <h1>RideConnect</h1>
-            <p>Share, Save, Connect – Your Daily Commute Redefined</p>
+            <p>Share, Save, Connect – Your Daily Commute Redefined!</p>
         </div>
         <div class="hero-image">
             <!-- Hero image -->

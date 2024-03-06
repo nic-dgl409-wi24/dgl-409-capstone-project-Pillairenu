@@ -257,7 +257,7 @@ footer {
     max-width: 70%;
     margin: 0 auto;
     /* padding: 20px 20px; */
-    background-color: #f3f9dc;
+    /* background-color: #f3f9dc; */
     padding: 3em;
     border-radius: 1em;
 	box-shadow: 
@@ -346,10 +346,12 @@ footer {
      flex-direction: row-reverse;
      justify-content: center;
     padding: 6em;
+    align-items: center;
+    gap:20px;
 }
 .sigin-image-side  {
     
-    width:50%
+    width:45%
    
 }
 .sigin-image-side img {
@@ -362,8 +364,8 @@ footer {
     /* padding: 40px; */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
-    width: 50%;
-    max-width: 450px; 
+    width: 55%;
+    max-width: 500px; 
     text-align: center; 
     
     
@@ -931,6 +933,10 @@ hr {
 }
 .signin-container {
     width:100%
+}
+.sigin-image-side img {
+    display: none;
+   
 }
 .signup {
     padding: 2em; /* Reduced padding */
