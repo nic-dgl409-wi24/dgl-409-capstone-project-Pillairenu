@@ -58,9 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
 
-
-
-
     // HERE Maps API initialization
     var platform = new H.service.Platform({
         'apikey': 'bc1jXDa0GtxqIOL1LvdT7FAWzUdaoZ24NYOQuTR3NtY'
