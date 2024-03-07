@@ -2,13 +2,64 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Hamburger menu
+    // ------------------ Hamburger menu---------------//
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.navbar-nav');
 
-    hamburger.addEventListener('click', function () {
-        navMenu.classList.toggle('show');
+    if (hamburger && navMenu) { // Check if elements exist
+        hamburger.addEventListener('click', function () {
+            navMenu.classList.toggle('show');
+        });
+    }
+
+    //------------------ Driver signup form validation---------------//
+    document.getElementById('personalDetailsForm').addEventListener('submit', function(event) {
+        let isValid = true; // Flag to keep track of whether the form is valid
+
+        // Validate Name
+        let name = document.getElementById('name').value;
+        if (!name) {
+            alert('Name must be filled out');
+            isValid = false;
+        }
+
+        // Validate Email
+        let email = document.getElementById('email').value;
+        if (!email || !validateEmail(email)) { // Using a helper function to validate email
+            alert('Please enter a valid email');
+            isValid = false;
+        }
+
+        // Validate Password
+        let password = document.getElementById('password').value;
+        if (!password || password.length < 8) { // Example: check if password is at least 8 characters
+            alert('Password must be at least 8 characters long');
+            isValid = false;
+        }
+
+        // Validate File Upload (Profile Photo)
+        let profilePhoto = document.getElementById('profile_photo').files;
+        if (!profilePhoto.length) {
+            alert('Profile photo is required');
+            isValid = false;
+        }
+
+        // If the form is not valid, prevent its submission
+        if (!isValid) {
+            event.preventDefault(); // Prevent form submission
+        }
     });
+
+    // Helper function to validate email format
+    function validateEmail(email) {
+        const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return regex.test(String(email).toLowerCase());
+    }
+    
+
+
+
+
 
     // HERE Maps API initialization
     var platform = new H.service.Platform({

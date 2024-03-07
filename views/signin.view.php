@@ -10,11 +10,11 @@
     <form action="/model/signin-model.php" method="POST">
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required autocomplete="off">
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required autocomplete="off">
         </div>
         <button type="submit" class="signin-btn">Sign In</button>
     </form>

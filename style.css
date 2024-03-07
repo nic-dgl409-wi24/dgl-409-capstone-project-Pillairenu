@@ -476,7 +476,8 @@ footer {
 .signup-container
 {
     display: flex;
-    align-items: center;
+    flex-direction: row-reverse;
+    align-items: stretch; 
     justify-content: center;
     min-height: 100vh;
     background-color: #f5f5f5; 
@@ -488,12 +489,49 @@ footer {
 .signup
 {
     padding:5em;  
-    width: 60%; 
+    width: 55%; 
+    height: auto;
 }
-.signup-image
+.welcome-container
 {
-    width: 40%; 
-    /* text-align: center; */
+    margin-top: 2em;
+    padding:6em;
+    max-width: 500px; 
+}
+.welcome-section
+{
+    flex: 1;
+    width: 45%; 
+    background-color:#cfffb3;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+    color: white;
+}
+
+.welcome-section h2 {
+    font-size: 2.5em; 
+    margin-bottom: 0.5em;
+    color:#40531B;
+}
+
+.welcome-section p {
+    font-size: 1em; 
+    margin-bottom: 2em;
+    color:#333;
+}
+
+.signin-link {
+   
+    color: #5454ef;
+    text-decoration: none; 
+    font-weight: 500; 
+}
+.signin-link:hover {
+    
+    text-decoration: underline; 
+    
 }
 .registration-form {
     padding: 40px; 
@@ -550,7 +588,7 @@ footer {
 }
 .signup-btn
 {
-    width:50%;
+    /* width:100%; */
     font-weight: 500; 
     text-transform: uppercase;
     font-size: 1.1rem;

@@ -5,8 +5,9 @@
 <div class="signup-container">
 <div class="signup">
    
-    <form action="/registration-controller" method="POST" enctype="multipart/form-data" class="registration-form">
-    <div class="registration-form-group">
+<form id="personalDetailsForm" action="/registration-controller" method="POST" enctype="multipart/form-data" class="registration-form">
+    
+<div class="registration-form-group">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
     </div>
@@ -18,25 +19,18 @@
         <option value="other">Other</option>
     </select>
     </div>
-    <div class="registration-form-group">
-    <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" name="dob" required>
-    </div>
+
     <div class="registration-form-group">
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    </div>
-    <div class="registration-form-group">
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" required>
+    <input type="email" id="email" name="email" required autocomplete="off">
     </div>
     <div class="registration-form-group">
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    <input type="password" id="password" name="password" required autocomplete="off">
     </div>
     <div class="registration-form-group upload-file">
-    <label for="profilePhoto">Profile Photo:</label>
-    <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" required>
+    <label for="profile_photo">Profile Photo:</label>
+    <input type="file" id="profile_photo" name="profile_photo" accept=".jpg,.jpeg,.png" required>
     </div>
     <div class="registration-form-group">
     <label for="govId">Choose a Government ID:</label>
@@ -54,20 +48,22 @@
     
     </div>
     <div  class="group">
-        <a href="/signin">Sign in instead</a>
         
-        <button type="submit" class="signin-btn signup-btn">
-            Next  
-        </button>
+        
+    <button type="submit" class="signin-btn signup-btn" id="nextButton">Next</button>
+
 </div> 
     
 </form>
 
 </div>
-<div class="signup-image">
+<div class="welcome-section">
     
-    <!-- <img src="images/signup-2.png" alt="Share Your Ride"> -->
-    <h1>Create your RideConnect Driver's Account</h1>
+    <div class="welcome-container">
+    <h2>Come Join Us!</h2>
+    <p>Enter your personal & vehicle details to start your journey with us a driver.</p>
+    <a href="/signin" class="signin-link">Already have an account? Sign in.</a>
+</div>
 </div>
 </div>
 <?php require('partials/footer.php');?>

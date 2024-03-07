@@ -21,11 +21,11 @@
 // }
 ?>
 
-
+<div class="signup-container">
 <div class="signup">
     
     <form action="/submitDriverRegistrationForm" method="POST" enctype="multipart/form-data" class="registration-form">
-    <h2> Driving & Vehicle Information</h2>
+    
     <!-- Driving Information -->
     
     <div class="registration-form-group">
@@ -33,7 +33,7 @@
         <input type="number" id="drivingExperience" name="drivingExperience" required>
     </div>
     <div class="registration-form-group upload-file">
-        <label for="licenseUpload">License:</label>
+        <label for="licenseUpload">Upload License:</label>
         <input type="file" id="licenseUpload" name="licenseUpload" required>
     </div>
 
@@ -67,5 +67,13 @@
     <button type="submit" class="signin-btn">Submit</button>
     </form>
 </div>
+<div class="welcome-section">
 
+    <div class="welcome-container">
+    <h2>Come Join Us!</h2>
+    <p>Enter your personal & vehicle details to start your journey with us a driver.</p>
+    <a href="/signin" class="signin-link">Already have an account? Sign in.</a>
+</div>
+</div>
+</div>
 <?php require('partials/footer.php');?>
