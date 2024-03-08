@@ -36,7 +36,7 @@
     <label for="govId">Choose a Government ID:</label>
     <select id="govId" name="govId" required>
         <option value="passport">Passport</option>
-        <option value="driving_license">Driving License</option>
+        <!-- <option value="driving_license">Driving License</option> -->
         <option value="national_id">National ID Card</option>
     </select>
     </div>

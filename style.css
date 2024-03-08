@@ -562,7 +562,8 @@ footer {
 .registration-form input[type="password"],
 .registration-form input[type="number"],
 .registration-form select,
-.registration-form .register-button {
+.registration-form .register-button, 
+.registration-form input[type="file"]{
     width: 100%; 
     padding: 10px;
     border: 2px solid #bdbdbd; 
@@ -576,7 +577,7 @@ footer {
     margin-bottom: 20px;
    
 }
-.registration-form-group .checkbox, .upload-file {
+.registration-form-group .checkbox {
     display:flex;   
     gap: 5px;
     align-items: baseline;
@@ -616,6 +617,7 @@ footer {
 {
     width:50%;
 }
+
 /*-------------------Driver Dashboard----------------*/
 /* User info styling */
 .driver-dashboard .user-info {

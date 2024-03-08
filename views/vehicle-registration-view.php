@@ -24,16 +24,16 @@
 <div class="signup-container">
 <div class="signup">
     
-    <form action="/submitDriverRegistrationForm" method="POST" enctype="multipart/form-data" class="registration-form">
+    <form action="/submitDriverRegistrationForm" method="POST" enctype="multipart/form-data" class="registration-form" id="driver-registration-form">
     
     <!-- Driving Information -->
     
     <div class="registration-form-group">
         <label for="drivingExperience">Years of Driving Experience:</label>
-        <input type="number" id="drivingExperience" name="drivingExperience" required>
+        <input type="number" id="drivingExperience" name="drivingExperience">
     </div>
     <div class="registration-form-group upload-file">
-        <label for="licenseUpload">Upload License:</label>
+        <label for="licenseUpload">Upload Driving License:</label>
         <input type="file" id="licenseUpload" name="licenseUpload" required>
     </div>
 
@@ -76,4 +76,6 @@
 </div>
 </div>
 </div>
+
+
 <?php require('partials/footer.php');?>
