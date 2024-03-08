@@ -98,7 +98,7 @@ header {
 .navbar-nav {
     list-style: none;
     display: flex;
-
+    align-items: center;
 }
 
 .navbar-nav li {
@@ -192,6 +192,34 @@ header {
     width: 25px;
     height: 3px;
     background-color: #40531B;
+}
+.search-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 20px; /* Adjust as necessary for the desired roundness */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Optional: adds a small gap between the icon and text */
+}
+
+.search-button i {
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
+/* Style for the hover state of the button */
+.search-button:hover {
+    background-color: #f0f0f0; /* Slightly darker on hover */
+}
+
+/* Style to remove outline that appears when the button is clicked (focus state) */
+.search-button:focus {
+    outline: none;
 }
 
 /* ------------Footer----------- */
@@ -343,9 +371,9 @@ footer {
 .sigin
 {
     display: flex;
-     min-height: 100vh;
-     flex-direction: row-reverse;
-     justify-content: center;
+    min-height: 100vh;
+    flex-direction: row-reverse;
+    justify-content: center;
     padding: 6em;
     align-items: center;
     gap:20px;
@@ -866,6 +894,7 @@ hr {
     display: flex;
     gap: 20px;
     flex-direction: column;
+    min-height: 100vh;
 }
 .rides-listing .ride {
     /* display: flex;
@@ -929,7 +958,7 @@ hr {
     max-width: 600px;
     margin: 20px auto;
     padding: 10px;
-   
+   min-height: 100vh;
 }
 .bookings-listing h2
 {  text-align: left;

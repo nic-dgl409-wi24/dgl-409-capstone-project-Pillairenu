@@ -28,6 +28,9 @@ try {
     <button id="searchBtn">Search</button>
 </div> -->
 <div class="rides-listing">
+<h2>Find Rides</h2>
+    <hr>
+    <?php if ($stmt->rowCount() > 0): ?>
     <?php while ($ride = $stmt->fetch()): ?>
         <div class="ride">
         <div class="rider-info">
@@ -43,8 +46,11 @@ try {
                 
             </div>
             <button onclick="location.href='/model/book-trip.model.php?ride_id=<?php echo $ride['ride_id']; ?>'">Book Trip</button>
-        </div>
-    <?php endwhile; ?>
+            </div>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <p>No rides posted yet.</p>
+    <?php endif; ?>
 </div>
 
 <?php require('partials/footer.php'); ?>
