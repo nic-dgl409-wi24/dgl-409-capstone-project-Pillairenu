@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar">
+    <nav class="navbar" id="navigation">
     <a href="/" class="navbar-logo">
         <img src="images/logo-3.png" alt="Logo" > 
     </a>

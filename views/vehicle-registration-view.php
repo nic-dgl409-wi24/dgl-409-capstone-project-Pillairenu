@@ -3,22 +3,6 @@
 <?php require('partials/main_nav.php');?>
 <?php
 
-
-// // Check if the personal information is set in the session
-// if (isset($_SESSION['personal_info'])) {
-//     $personalInfo = $_SESSION['personal_info'];
-    
-//     // Echoing session data for verification
-//     echo "<p>Name: " . htmlspecialchars($personalInfo['name']) . "</p>";
-//     echo "<p>Gender: " . htmlspecialchars($personalInfo['gender']) . "</p>";
-//     echo "<p>Date of Birth: " . htmlspecialchars($personalInfo['dob']) . "</p>";
-//     echo "<p>Email: " . htmlspecialchars($personalInfo['email']) . "</p>";
-//     echo "<p>Phone: " . htmlspecialchars($personalInfo['phone']) . "</p>";
-//     // Password is not displayed for security reasons
-//     // If you handle file uploads, remember to process them securely and only store references or file paths in session
-// } else {
-//     echo "<p>No personal information found. Please start from the registration form.</p>";
-// }
 ?>
 
 <div class="signup-container">
@@ -30,9 +14,9 @@
     
     <div class="registration-form-group">
         <label for="drivingExperience">Years of Driving Experience:</label>
-        <input type="number" id="drivingExperience" name="drivingExperience">
+        <input type="number" id="drivingExperience" name="drivingExperience" required>
     </div>
-    <div class="registration-form-group upload-file">
+    <div class="registration-form-group ">
         <label for="licenseUpload">Upload Driving License:</label>
         <input type="file" id="licenseUpload" name="licenseUpload" required>
     </div>
@@ -50,11 +34,11 @@
         <label for="licensePlate">License Plate No.:</label>
         <input type="text" id="licensePlate" name="licensePlate" required>
     </div>
-    <div class="registration-form-group upload-file">
+    <div class="registration-form-group ">
         <label for="insuranceDoc">Vehicle Insurance:</label>
         <input type="file" id="insuranceDoc" name="insuranceDoc" required>
     </div>
-    <div class="registration-form-group upload-file">
+    <div class="registration-form-group ">
         <label for="vehiclePhoto">Vehicle Photo:</label>
         <input type="file" id="vehiclePhoto" name="vehiclePhoto" required>
     </div>
@@ -76,6 +60,25 @@
 </div>
 </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalLabel">Form Submission Success</h2>     
+      </div>
+      <div class="modal-body">
+        <p>Your form has been submitted successfully. You will be redirected shortly.</p>
+      </div>
+      <div class="close-btn-container">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         Close
+    </button>
 
+</div>
+    </div>
+ 
+  </div>
+</div>
 
 <?php require('partials/footer.php');?>

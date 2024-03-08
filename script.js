@@ -106,18 +106,20 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('You must consent to a background check.');
             isValid = false;
         }
-
-        // If all validations pass, submit the form
+        
         if (isValid) {
             // Show the Bootstrap modal
             $('#successModal').modal('show');
-
-            // Wait for 3 seconds before redirecting
+        
+            // Capture the form context
+            const form = this;
+        
+            // Wait for the modal to be shown for 3 seconds before submitting the form
             setTimeout(function() {
-                window.location.href = '/submitDriverRegistrationForm'; // Change '/signin-page' to your actual sign-in page URL
+                form.submit(); // Submit the form programmatically
             }, 3000); // Adjust timing as necessary
         }
-   
+        
     });
     }
     // HERE Maps API initialization

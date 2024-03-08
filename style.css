@@ -79,8 +79,8 @@ header {
     padding: 2em 6em;
 }
 
-.navbar {
-    display: flex;
+#navigation {
+    display: flex  ; 
     justify-content: space-between;
     align-items: center;
     padding: 2em 6em;
@@ -561,9 +561,9 @@ footer {
 .registration-form input[type="tel"],
 .registration-form input[type="password"],
 .registration-form input[type="number"],
+.registration-form input[type="file"],
 .registration-form select,
-.registration-form .register-button, 
-.registration-form input[type="file"]{
+.registration-form .register-button {
     width: 100%; 
     padding: 10px;
     border: 2px solid #bdbdbd; 
@@ -583,6 +583,13 @@ footer {
     align-items: baseline;
     
 }
+.upload-file
+{
+    display:flex;
+    gap: 15px;
+    align-items: baseline;
+}
+
 .signin-btn img {
     
     width:40px;
@@ -617,6 +624,86 @@ footer {
 {
     width:50%;
 }
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color:#CFFFB3;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 2em;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* The Close Button */
+.close-btn-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    padding: 1em; /* Adjust padding as needed */
+}
+
+.close {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color:#EA9010;
+    border:none;
+    padding: 6px 20px;
+}
+
+
+.close:hover,
+.close:focus {
+    color:#CFFFB3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    color:#40531B;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+.modal-header h2
+{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.modal-body {
+    padding: 10px 16px;
+}
+
+.modal-body p {
+
+    font-size: 1.1rem;
+    text-align: center;
+    color:#333;
+}
+
 
 /*-------------------Driver Dashboard----------------*/
 /* User info styling */
