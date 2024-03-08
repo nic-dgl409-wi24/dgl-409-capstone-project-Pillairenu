@@ -122,6 +122,59 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
     }
+    
+    //---------------- Passenger signup-------------------------------
+    const passengerDetailsForm = document.getElementById('passenger-registration-form');
+
+    if (passengerDetailsForm) {
+        passengerDetailsForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let isValid = true; 
+
+            // Validate Name
+            let name = document.getElementById('name').value;
+            if (!name) {
+                alert('Name must be filled out');
+                isValid = false;
+            }
+
+            // Validate Email
+            let email = document.getElementById('email').value;
+            if (!email || !validateEmail(email)) {
+                alert('Please enter a valid email');
+                isValid = false;
+            }
+
+            // Validate Password
+            let password = document.getElementById('password').value;
+            if (!password || password.length < 8) { // Corrected to check for less than 8 characters
+                alert('Password must be at least 8 characters long');
+                isValid = false;
+            }
+
+            // Validate File Upload (Profile Photo)
+            let profilePhoto = document.getElementById('profilePhoto').files;
+            if (!profilePhoto.length) {
+                alert('Profile photo is required');
+                isValid = false;
+            }
+
+            // If everything is valid, show the modal and then submit the form
+            if (isValid) {
+                $('#successModal').modal('show');
+
+                // Capture the form context
+                const form = this;
+            
+                // Wait for the modal to be shown for 3 seconds before submitting the form
+                setTimeout(function() {
+                    form.submit(); // Submit the form programmatically
+                }, 3000); // Adjust timing as necessary
+            }
+        });
+    }
+
     // HERE Maps API initialization
     // var platform = new H.service.Platform({
     //     'apikey': 'bc1jXDa0GtxqIOL1LvdT7FAWzUdaoZ24NYOQuTR3NtY'

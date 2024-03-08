@@ -28,7 +28,7 @@
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required autocomplete="off">
     </div>
-    <div class="registration-form-group upload-file">
+    <div class="registration-form-group">
     <label for="profile_photo">Profile Photo:</label>
     <input type="file" id="profile_photo" name="profile_photo" accept=".jpg,.jpeg,.png" required>
     </div>
@@ -40,7 +40,7 @@
         <option value="national_id">National ID Card</option>
     </select>
     </div>
-    <div class="registration-form-group upload-file">
+    <div class="registration-form-group">
     <label for="govIdFile">Upload Govt.ID:</label>
     <input type="file" id="govIdFile" name="govIdFile" accept=".pdf,.jpg,.jpeg,.png" required>
     </div>

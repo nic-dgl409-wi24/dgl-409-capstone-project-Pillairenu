@@ -42,13 +42,11 @@ try {
     $govIdFilePath = handleFileUpload('govIdFile');
 
     // Insert user data into the users table
-    $stmt = $pdo->prepare("INSERT INTO users (name, gender, dob, email, phone, password, profile_photo_path, gov_id_type, gov_id_path) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO users (name, gender, email, password, profile_photo_path, gov_id_type, gov_id_path) VALUES (?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute([
         $_POST['name'],
         $_POST['gender'],
-        $_POST['dob'],
         $_POST['email'],
-        $_POST['phone'],
         $_POST['password'],
         $profilePhotoPath,
         $_POST['govId'],
