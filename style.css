@@ -196,7 +196,7 @@ header {
 .search-button {
     background-color: #ffffff;
     color: #000000;
-    padding: 9px 16px;
+    padding: 8px 16px;
     border: none;
     border-radius: 20px; /* Adjust as necessary for the desired roundness */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
@@ -736,24 +736,25 @@ footer {
 
 /*-------------------Driver Dashboard----------------*/
 /* User info styling */
-.driver-dashboard .user-info {
+.user-info {
     
     background-color: #ffffff; /* White background for the user info bar */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
     display:flex;
     align-items: center;
-    padding-left:8em;
+    padding: 1em;
+    justify-content: center;
     
 }
 
-.driver-dashboard .user-info img.profile-pic {
+.user-info img.profile-pic {
     width: 80px; /* Adjust based on your preference */
    
     border-radius: 50%; /* Circular profile pictures */
     
 }
 
-.driver-dashboard .user-info span , .user-info a {
+ .user-info span , .user-info a {
     font-size: 1.2em;
     font-weight: 600;
     color:#40531B;
@@ -764,32 +765,38 @@ footer {
     text-decoration: none;
     margin-left: 64%;
 }
+.driver-options
+{
+    margin-top:3em;
+    margin-bottom:6em;
+}
 /* Dashboard cards styling */
 .dashboard-cards {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Space between cards */
+    gap: 100px; /* Space between cards */
     padding: 10em; /* Padding around the cards */
-    
+    perspective: 1000px; /* Provides depth to the flip effect */
 }
 
 .dashboard-card {
-    width: 230px; 
-    height: 230px;
-    background-color:#ADE25D;
+    width: 330px; 
+    height: 330px;
+    background-color:#CFFFB3;
     color: #333; 
     text-align: center;
-    line-height: 230px;
+    line-height: 330px;
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
     transition: all 0.3s ease; 
     text-decoration: none; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
 .dashboard-card:hover {
     transform: translateY(-5px); 
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3); 
 }
 
 .dashboard-card h3 {
@@ -798,6 +805,48 @@ footer {
     line-height: normal;
     display: inline-block;
     vertical-align: middle;
+    font-size: 1.8em;
+}
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+    .card-front img
+    {
+        width:100%;
+        border-radius: 10px; 
+    }
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+   
+}
+
+
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+   
+}
+
+
+.dashboard-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.dashboard-card a{
+
+    color:#40531B;
 }
 
 /*-------------------Post a ride----------------*/
@@ -817,19 +866,21 @@ footer {
 }
 
 .page-title {
-    text-align: left;
-    
+    text-align: left; 
     color: #40531B;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 hr {
     border: 0; 
     height: 5px; 
-    width:20%;
+    width:10%;
     border-radius:2px;
     background-color:#CFFFB3;
     margin-top: 20px; 
-    margin-bottom: 40px; /* Space below the hr */
+}
+.heading
+{
+    margin-left:12em;
 }
 .post-ride-form {
     display: grid;
@@ -837,6 +888,7 @@ hr {
     grid-template-columns: 1fr 1fr;
     gap: 70px;
     align-items: center;
+    margin-top:20px;
 }
 
 .input-group {

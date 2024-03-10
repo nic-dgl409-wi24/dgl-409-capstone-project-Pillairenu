@@ -36,15 +36,52 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
         <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
         <a href="/logout">Logout</a>
     </div>
-    <div class="dashboard-cards">
-        <a href="/post-a-ride" class="dashboard-card"> <!-- Update href as needed -->
+    <div class="driver-options">
+    <div class="heading">
+        <h2 class="page-title">My Dashboard</h2>
+        <hr>
+    </div>
+    <!-- <div class="dashboard-cards">
+        <a href="/post-a-ride" class="dashboard-card"> 
         
             <h3>Post a Ride</h3>
         </a>
-        <a href="/post-an-event" class="dashboard-card"> <!-- Update href as needed -->
+        <a href="/post-an-event" class="dashboard-card"> 
             <h3>Post an Event</h3>
         </a>
+        
+    </div> -->
+
+    <div class="dashboard-cards">
+    <div class="dashboard-card">
+    <a href="/post-a-ride" >
+            <div class="card-inner">
+                <div class="card-front">
+                <img src="images/post_ride.png" alt="Profile Picture" class="profile-pic">
+
+                </div>
+                <div class="card-back">
+                <h3>Post a Ride</h3>
+                    
+                </div>
+            </div>
+        </a>
     </div>
+    <div class="dashboard-card">
+    <a href="/post-an-event">
+            <div class="card-inner">
+                <div class="card-front">
+                <img src="images/post_event.png" alt="Profile Picture" class="profile-pic">
+
+                </div>
+                <div class="card-back">
+                <h3>Post an Event</h3>
+                   
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
 </div>
 
 <?php require('partials/footer.php'); ?>
