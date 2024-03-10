@@ -41,17 +41,6 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
         <h2 class="page-title">My Dashboard</h2>
         <hr>
     </div>
-    <!-- <div class="dashboard-cards">
-        <a href="/post-a-ride" class="dashboard-card"> 
-        
-            <h3>Post a Ride</h3>
-        </a>
-        <a href="/post-an-event" class="dashboard-card"> 
-            <h3>Post an Event</h3>
-        </a>
-        
-    </div> -->
-
     <div class="dashboard-cards">
     <div class="dashboard-card">
     <a href="/post-a-ride" >

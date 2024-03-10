@@ -264,7 +264,7 @@ footer {
 
 .footer-bottom {
     margin-top: 1rem;
-    margin-left: 4rem;
+    margin-left: 5.8rem;
     
 }
 
@@ -768,7 +768,7 @@ footer {
 .driver-options
 {
     margin-top:3em;
-    margin-bottom:6em;
+    margin-bottom:8em;
 }
 /* Dashboard cards styling */
 .dashboard-cards {
@@ -1057,6 +1057,77 @@ hr {
     width: 640px; 
     height: 480px;
     margin-top: 20px;
+}
+/*-------------------Search Function----------------*/
+
+.sidebar {
+    width: 200px;
+    background-color: #e8e8e8;
+    padding: 20px;
+    float: left;
+    height:100vh;
+}
+
+.main-content {
+    margin-left: 200px;
+    padding: 20px;
+    height:100vh;
+}
+
+
+
+.search-form {
+    background-color: #e8e8e8;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.ride-list {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.ride {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.ride-photo {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.ride-info {
+    flex-grow: 1;
+}
+
+.book-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
