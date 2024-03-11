@@ -1060,24 +1060,74 @@ hr {
 }
 /*-------------------Search Function----------------*/
 
+/* Style for the aside container */
 .sidebar {
-    width: 200px;
-    background-color: #e8e8e8;
-    padding: 20px;
-    float: left;
-    height:100vh;
+    width: 200px; 
+    background-color:  #cfffb3; 
+    padding: 20px; 
+    float: left; 
+    height: 100vh; 
+    box-sizing: border-box; 
+   
+    
 }
 
+/* Style for labels */
+.sidebar label {
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: bold; 
+    color: #333; 
+}
+
+/* Style for input fields */
+.sidebar input[type="date"] {
+    width: calc(100% - 2px); 
+    padding: 8px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+/* Style for select fields */
+.sidebar select {
+    width: 100%; 
+    padding: 8px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    background-color: #fff; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+}
+
+/* Additional style for better UX */
+.sidebar input[type="date"]:focus,
+.sidebar select:focus {
+    outline: none; 
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, .5); 
+}
+
+/* You might want to add a custom arrow icon for the select box */
+.sidebar select {
+    background-image: url('arrow-down-icon.png'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    background-size: 12px; 
+}
 .main-content {
     margin-left: 200px;
-    padding: 20px;
+    padding: 50px;
     height:100vh;
+    
 }
 
 
 
 .search-form {
-    background-color: #e8e8e8;
+    background-color:  #cfffb3;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -1088,6 +1138,7 @@ hr {
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ccc;
+    width:35%;
 }
 
 .search-form button {
@@ -1096,15 +1147,20 @@ hr {
     color: white;
     border: none;
     cursor: pointer;
+    width:15%;
 }
-
+.search-form button:hover
+{
+    background-color: #65d268;
+}
+ /* SEARCH A RIDE */
 .ride-list {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
 }
 
-.ride {
+.rides {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1114,14 +1170,21 @@ hr {
 }
 
 .ride-photo {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 20px;
 }
 
 .ride-info {
     flex-grow: 1;
+    margin-left:90px;
+    
 }
-
+.ride-info p
+{
+    margin-bottom: 10px;
+}
 .book-btn {
     background-color: #4CAF50;
     color: white;

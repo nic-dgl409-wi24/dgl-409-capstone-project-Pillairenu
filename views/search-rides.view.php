@@ -1,9 +1,52 @@
-<?php require('partials/head.php');?>
-
-<?php require('partials/main_nav.php');
+<?php
+require_once 'Database.php';
 session_start();
+require('partials/head.php');
+require('partials/main_nav.php');
 
+try {
+    // Start with a base SQL query
+    $sql = "
+        SELECT rides.*, users.name, users.profile_photo_path
+        FROM rides
+        JOIN users ON rides.user_id = users.user_id
+    ";
+
+    // Initialize an array for SQL conditions and parameters
+    $conditions = [];
+    $parameters = [];
+    
+    // Check if the form has been submitted
+    if (isset($_GET['search'])) {
+        $departure = isset($_GET['departure']) ? $_GET['departure'] : '';
+        $destination = isset($_GET['destination']) ? $_GET['destination'] : '';
+
+        // Add conditions for departure if it's not empty
+        if (!empty($departure)) {
+            $conditions[] = "rides.departure LIKE :departure";
+            $parameters[':departure'] = "%$departure%";
+        }
+
+        // Add conditions for destination if it's not empty
+        if (!empty($destination)) {
+            $conditions[] = "rides.arrival LIKE :destination";
+            $parameters[':destination'] = "%$destination%";
+        }
+    }
+
+    // Append conditions to SQL query if any
+    if (!empty($conditions)) {
+        $sql .= " WHERE " . implode(' AND ', $conditions);
+    }
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute($parameters);
+
+} catch (PDOException $e) {
+    die("Could not connect to the database: " . $e->getMessage());
+}
 ?>
+
 
 <div class="sidebar">
     <!-- Filters will go here -->
@@ -14,33 +57,36 @@ session_start();
         <option value="any">Men or Women</option>
         <option value="men">Men</option>
         <option value="women">Women</option>
+        <option value="other">Other</option>
     </select>
 </div>
 
 <div class="main-content">
-    <header>
-        <!-- Navigation will go here -->
-    </header>
-    
     <div class="search-form">
-        <input type="text" id="departure" placeholder="Departure">
-        <input type="text" id="destination" placeholder="Destination">
-        <button id="search">Search</button>
+    <form method="GET" class="search-form">
+        <input type="text" name="departure" id="departure" placeholder="Departure" value="<?php echo isset($_GET['departure']) ? htmlspecialchars($_GET['departure']) : ''; ?>">
+        <input type="text" name="destination" id="destination" placeholder="Destination" value="<?php echo isset($_GET['destination']) ? htmlspecialchars($_GET['destination']) : ''; ?>">
+        <button type="submit" name="search" id="search">Search</button>
+    </form>
     </div>
-
-    <div class="ride-list">
-        <!-- Rides will be listed here -->
-        <div class="ride">
-            <img src="profile1.jpg" alt="Driver" class="ride-photo">
-            <div class="ride-info">
-                <p><strong>Name</strong></p>
-                <p>3.20pm — 4.20pm</p>
-                <p>Departure — Destination</p>
-            </div>
-            <button class="book-btn">Book Trip</button>
+    <?php if ($stmt && $stmt->rowCount() > 0): ?>
+        <div class="ride-list">
+            <?php while ($ride = $stmt->fetch()): ?>
+                <div class="rides">
+                    <img src="images/<?php echo htmlspecialchars($ride['profile_photo_path'] ?: 'person.png'); ?>" alt="Driver" class="ride-photo">
+                    <div class="ride-info">
+                        <p><strong><?php echo htmlspecialchars($ride['name']); ?></strong></p>
+                        <p><b>Time:</b> <?php echo htmlspecialchars($ride['time']); ?></p>
+                        <p><b>Departure:</b> <?php echo htmlspecialchars($ride['departure']); ?></p>
+                        <p><b>Destination:</b> <?php echo htmlspecialchars($ride['arrival']); ?></p>
+                    </div>
+                    <button class="book-btn">Book Trip</button>
+                </div>
+            <?php endwhile; ?>
         </div>
-        <!-- Repeat for each ride -->
-    </div>
+    <?php else: ?>
+        <p>No rides posted yet.</p>
+    <?php endif; ?>
 </div>
 
 <?php require('partials/footer.php'); ?>

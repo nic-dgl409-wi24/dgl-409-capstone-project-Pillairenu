@@ -22,11 +22,6 @@ try {
     die("Error fetching rides: " . $e->getMessage());
 }
 ?>
-<!-- <div class="search-container">
-    <input type="text" id="departureSearch" placeholder="Departure location">
-    <input type="text" id="arrivalSearch" placeholder="Arrival location">
-    <button id="searchBtn">Search</button>
-</div> -->
 <div class="rides-listing">
 <h2>Find Rides</h2>
     <hr>
@@ -34,7 +29,7 @@ try {
     <?php while ($ride = $stmt->fetch()): ?>
         <div class="ride">
         <div class="rider-info">
-            <img src="<?php echo htmlspecialchars($ride['profile_photo_path'] ?: 'images/person.png'); ?>" alt="Driver's Profile Picture" class="profile-pic">
+            <img src="images/<?php echo htmlspecialchars($ride['profile_photo_path'] ?: 'images/person.png'); ?>" alt="Driver's Profile Picture" class="profile-pic">
             <h4><?php echo htmlspecialchars($ride['name']); ?></h4>
     </div>
             <div class="ride-details">
