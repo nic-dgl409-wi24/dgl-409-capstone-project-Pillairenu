@@ -79,8 +79,8 @@ try {
                         <p><b>Time:</b> <?php echo htmlspecialchars($ride['time']); ?></p>
                         <p><b>Departure:</b> <?php echo htmlspecialchars($ride['departure']); ?></p>
                         <p><b>Destination:</b> <?php echo htmlspecialchars($ride['arrival']); ?></p>
-                    </div>
-                    <button class="book-btn">Book Trip</button>
+                    </div>       
+                    <button class="book-btn">View Ride Details</button>
                 </div>
             <?php endwhile; ?>
         </div>

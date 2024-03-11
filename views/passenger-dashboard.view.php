@@ -33,19 +33,48 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
 
 <div class="driver-dashboard">
     <div class="user-info">
-        <img src="<?php echo $defaultProfilePic; ?>" alt="Profile Picture" class="profile-pic">
+    <img src="images/person.png" alt="Profile Picture" class="profile-pic">
         <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
         <a href="/logout">Logout</a>
     </div>
+    <div class="driver-options">
+    <div class="heading">
+        <h2 class="page-title">My Dashboard</h2>
+        <hr>
+    </div>
     <div class="dashboard-cards">
-        <a href="/find-rides" class="dashboard-card"> <!-- Update href as needed -->
-        
-            <h3>Find a Ride</h3>
-        </a>
-        <a href="/bookings" class="dashboard-card"> <!-- Update href as needed -->
-            <h3>Bookings</h3>
+    <div class="dashboard-card">
+    <a href="/find-rides" >
+            <div class="card-inner">
+                <div class="card-front">
+                <img src="images/find-ride.png" alt="Profile Picture" class="profile-pic">
+
+                </div>
+                <div class="card-back">
+                <h3>Find a Ride</h3>
+                    
+                </div>
+            </div>
         </a>
     </div>
+    <div class="dashboard-card">
+    <a href="/bookings">
+            <div class="card-inner">
+                <div class="card-front">
+                <img src="images/booking.png" alt="Profile Picture" class="profile-pic">
+
+                </div>
+                <div class="card-back">
+                <h3>Bookings</h3>
+                   
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+    
+
 </div>
 
 <?php require('partials/footer.php'); ?>

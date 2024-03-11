@@ -669,7 +669,7 @@ footer {
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color:#CFFFB3;
+    background-color:#f0f0f0;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 2em;
     border: 1px solid #888;
@@ -878,6 +878,15 @@ hr {
     background-color:#CFFFB3;
     margin-top: 20px; 
 }
+.hr {
+    border: 0; 
+    height: 5px; 
+    width:20%;
+    border-radius:2px;
+    background-color:#CFFFB3;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
 .heading
 {
     margin-left:12em;
@@ -1062,12 +1071,15 @@ hr {
 
 /* Style for the aside container */
 .sidebar {
-    width: 200px; 
-    background-color:  #cfffb3; 
-    padding: 20px; 
-    float: left; 
-    height: 100vh; 
-    box-sizing: border-box; 
+    width: 200px;
+    background-color: #cfffb3;
+    padding: 20px;
+    float: left;
+    /* height: 100vh; */
+    left: 17px;
+    margin-left: 15px;
+    margin-top: 50px;
+    height: 90%;
    
     
 }
@@ -1123,8 +1135,6 @@ hr {
     height:100vh;
     
 }
-
-
 
 .search-form {
     background-color:  #cfffb3;

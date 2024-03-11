@@ -28,7 +28,7 @@ try {
 
 <div class="bookings-listing">
     <h2>Your Booked Rides</h2>
-    <hr>
+    <hr class="hr">
     <?php if ($stmt->rowCount() > 0): ?>
         <?php while ($ride = $stmt->fetch()): ?>
             <div class="booking">
