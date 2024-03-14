@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
                 // Wait for the modal to be shown for 3 seconds before submitting the form
                 setTimeout(function() {
+                   
                     form.submit(); // Submit the form programmatically
                 }, 3000); // Adjust timing as necessary
             }
