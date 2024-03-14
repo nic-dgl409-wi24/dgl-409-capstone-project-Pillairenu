@@ -416,7 +416,7 @@ footer {
     border-radius: 0 0 75px 75px;
 }
 
-.top:hover {
+/* .top:hover {
     transition: .4s;
     border-radius: 0;
     width: 100%;
@@ -426,7 +426,7 @@ footer {
     transition: .4s;
     border-radius: 0 0 75px 75px;
     width: 100%;
-}
+} */
 
 .signin-container h2 {
     

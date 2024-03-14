@@ -4,6 +4,8 @@ session_start();
 require('partials/head.php');
 require('partials/main_nav.php');
 
+$userLoggedIn = isset($_SESSION['user_id']) && $_SESSION['role'] === 'passenger';
+
 try {
     // Start with a base SQL query
     $sql = "
@@ -80,7 +82,7 @@ try {
                         <p><b>Departure:</b> <?php echo htmlspecialchars($ride['departure']); ?></p>
                         <p><b>Destination:</b> <?php echo htmlspecialchars($ride['arrival']); ?></p>
                     </div>       
-                    <button class="book-btn">View Ride Details</button>
+                    <button onclick="handleRideDetails('<?php echo $ride['ride_id']; ?>')">Book Trip</button>
                 </div>
             <?php endwhile; ?>
         </div>
@@ -88,5 +90,17 @@ try {
         <p>No rides posted yet.</p>
     <?php endif; ?>
 </div>
-
+<script>
+var userLoggedIn = <?php echo json_encode($userLoggedIn); ?>;
+function handleRideDetails(rideId) {
+    if (!userLoggedIn) {
+        // Redirect to sign-in page or show a pop-up modal to sign in
+        alert("Please sign in to view ride details."); // Example: Alert for demonstration
+        window.location.href = '/signin'; // Redirect to the sign-in page
+    } else {
+        // If logged in, proceed to view details or book the ride
+        window.location.href = '/model/view-trip.model.php?ride_id=' + rideId;
+    }
+}
+</script>
 <?php require('partials/footer.php'); ?>
