@@ -12,9 +12,10 @@
                 </button>
             </form>
         </li>
-        <li><a href="/#driver">Driver</a></li>
-        <li><a href="/#passenger">Passenger</a></li>
-       
+      <!-- Conditionally display logout link -->
+      <?php if (isset($_SESSION['user_id']) && ($_SESSION['role'] === 'passenger' || $_SESSION['role'] === 'driver')): ?>
+            <li><a href="/logout">Logout</a></li>
+        <?php endif; ?>
     </ul>
   </nav>
   

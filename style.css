@@ -689,8 +689,23 @@ footer {
 /* The Close Button */
 .close-btn-container {
     display: flex;
+    flex-direction: column;
     justify-content: center; /* Center horizontally */
     padding: 1em; /* Adjust padding as needed */
+    align-items: center;
+    gap: 20px;
+}
+
+.close-btn-container a {
+    text-decoration: none;
+    color: #5454ef;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    
+}
+.close-btn-container a:hover{
+
+    text-decoration: underline;
 }
 
 .close {
@@ -700,6 +715,7 @@ footer {
     background-color:#EA9010;
     border:none;
     padding: 6px 20px;
+    width: 15%;
 }
 
 
@@ -742,8 +758,8 @@ footer {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
     display:flex;
     align-items: center;
-    padding: 1em;
-    justify-content: center;
+    padding: .5em;
+    justify-content: flex-end;
     
 }
 
@@ -755,7 +771,7 @@ footer {
 }
 
  .user-info span , .user-info a {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 600;
     color:#40531B;
     font-family: "Merriweather", serif;
@@ -775,7 +791,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 100px; /* Space between cards */
-    padding: 10em; /* Padding around the cards */
+    padding: 5em; /* Padding around the cards */
     perspective: 1000px; /* Provides depth to the flip effect */
 }
 
@@ -1037,7 +1053,7 @@ hr {
 .ride-details p {
     margin: 5px 0;
 }
-/*-------------------search---------------*/
+/*-------------------search a ride---------------*/
 .search-form {
     margin-bottom: 20px;
     text-align: center;
@@ -1196,11 +1212,16 @@ hr {
     margin-bottom: 10px;
 }
 .book-btn {
+    padding: 10px;
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
     border: none;
     cursor: pointer;
+    width:10%;
+}
+.book-btn:hover
+{
+    background-color: #65d268;
 }
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {

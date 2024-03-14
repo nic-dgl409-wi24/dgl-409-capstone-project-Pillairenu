@@ -34,7 +34,7 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
     <div class="user-info">
         <img src="images/<?php echo htmlspecialchars($profilePicPath); ?>" alt="Profile Picture" class="profile-pic">
         <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
-        <a href="/logout">Logout</a>
+       
     </div>
     <div class="driver-options">
     <div class="heading">

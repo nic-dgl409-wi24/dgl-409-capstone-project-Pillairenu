@@ -82,7 +82,7 @@ try {
                         <p><b>Departure:</b> <?php echo htmlspecialchars($ride['departure']); ?></p>
                         <p><b>Destination:</b> <?php echo htmlspecialchars($ride['arrival']); ?></p>
                     </div>       
-                    <button onclick="handleRideDetails('<?php echo $ride['ride_id']; ?>')">Book Trip</button>
+                    <button type="submit" name="search" class="book-btn" onclick="handleRideDetails('<?php echo $ride['ride_id']; ?>')">View Trip</button>
                 </div>
             <?php endwhile; ?>
         </div>
@@ -90,13 +90,36 @@ try {
         <p>No rides posted yet.</p>
     <?php endif; ?>
 </div>
+<!-- Modal -->
+
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalLabel">Sign In Required</h2>     
+      </div>
+      <div class="modal-body">
+        <p>Please sign in to view ride details.</p>
+      </div>
+      <div class="close-btn-container">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         Close
+    </button>
+    <a href="/signin" class="btn btn-primary">Sign In</a>
+    </div>
+    </div>
+ 
+  </div>
+</div>
+
 <script>
 var userLoggedIn = <?php echo json_encode($userLoggedIn); ?>;
 function handleRideDetails(rideId) {
     if (!userLoggedIn) {
         // Redirect to sign-in page or show a pop-up modal to sign in
-        alert("Please sign in to view ride details."); // Example: Alert for demonstration
-        window.location.href = '/signin'; // Redirect to the sign-in page
+        $('#successModal').modal('show'); // Example: Alert for demonstration
+       // window.location.href = '/signin'; // Redirect to the sign-in page
     } else {
         // If logged in, proceed to view details or book the ride
         window.location.href = '/model/view-trip.model.php?ride_id=' + rideId;

@@ -1,6 +1,6 @@
 <?php require('partials/head.php');?>
 
-<?php require('partials/main_nav.php');?>
+<?php require('partials/nav.php');?>
 <?php session_start();?>
 
 <div class="signup-container">
@@ -67,7 +67,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" id="modalLabel">Form Submission Success</h2>     
+        <h2 class="modal-title" id="modalLabel">Registration Success</h2>     
       </div>
       <div class="modal-body">
         <p>Your form has been submitted successfully. You will be redirected shortly.</p>
