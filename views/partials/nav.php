@@ -10,7 +10,7 @@
     </nav> -->
     <nav class="navbar" id="navigation">
     <a href="/" class="navbar-logo">
-        <img src="images/logo-3.png" alt="Logo" > 
+        <img src="images/logo-5.png" alt="Logo" > 
     </a>
     <button class="hamburger" aria-label="Toggle menu">
         <span></span>

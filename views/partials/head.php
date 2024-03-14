@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>RideConnect</title>
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    
+     <!-- Favicon for most browsers -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
     <!-- load font awesome -->
     <script src="https://kit.fontawesome.com/4f8fb381e3.js" crossorigin="anonymous"></script>
