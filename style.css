@@ -263,8 +263,8 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 1rem;
-    margin-left: 5.8rem;
+    margin-top: 1em;
+    margin-left: 4.3em;
     
 }
 
@@ -362,8 +362,7 @@ footer {
 .home-page-content
 {
     background-color:#F9F9F9;
-    margin-top:50px;
-    margin-bottom: 50px;
+    margin: 100px 0;
 }
 
 /*-------------------Sign In----------------*/
@@ -513,7 +512,7 @@ footer {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
     max-width:80%;
-    margin:50px auto;
+    margin:100px auto;
 }
 .signup
 {
@@ -1315,34 +1314,51 @@ hr {
         height: auto; /* Maintain aspect ratio */
     }
 
-.footer-bottom {
-    margin-left:0;
-  
-}
-.sigin
-{
+    .footer-bottom {
+        margin-left:0;
     
-     flex-direction: column-reverse;
-     align-items: center;
-}
-.sigin-image-side  {
+    }
+    .sigin
+    {
+        
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .sigin-image-side  {
+        
+        width:100%
     
-    width:100%
-   
-}
-.signin-container {
-    width:100%
-}
-.sigin-image-side img {
-    display: none;
-   
-}
-.signup {
-    padding: 2em; /* Reduced padding */
-}
+    }
+    .signup-container
+    {
+        flex-direction: column-reverse;     
+       
+    }
+     .signup
+    {
+       
+        width: 100%; 
+       
+    }
+    
+    .welcome-section
+    {
+        
+        width: 100%; 
+    }
+    .signin-container {
+        width:100%
+    }
+    .sigin-image-side img {
+        display: none;
+    
+    }
+    .signup {
+        padding: 2em; /* Reduced padding */
+    }
 
-.registration-form {
-    padding: 20px; /* Reduced padding */
-    max-width: 80%; /* Allows some space on very small screens */
-}
-}
+    .registration-form {
+        padding: 20px; /* Reduced padding */
+        max-width: 100%; /* Allows some space on very small screens */
+    }
+    }
