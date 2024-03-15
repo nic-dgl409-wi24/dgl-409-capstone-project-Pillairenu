@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar" id="navigation">
     <a href="/" class="navbar-logo">
-    <img src="images/logo-5.png" alt="Logo" > 
+    <img src="images/LOGO-8.png" alt="Logo" > 
 
     </a>
     <ul class="navbar-nav">

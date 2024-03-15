@@ -1,6 +1,7 @@
 <?php require('partials/head.php');?>
 
-<?php require('partials/main_nav.php');
+<?php require('partials/main_nav.php');?>
+<?php
 session_start();
 
 // Check if the user is logged in and has the role of 'driver'
@@ -35,6 +36,7 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
     <div class="user-info">
     <img src="images/person.png" alt="Profile Picture" class="profile-pic">
         <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
+        <a href="/logout">Logout</a>
     </div>
     <div class="driver-options">
     <div class="heading">

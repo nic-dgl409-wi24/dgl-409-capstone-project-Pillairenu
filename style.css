@@ -758,9 +758,9 @@ footer {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
     display:flex;
     align-items: center;
-    padding: .5em;
-    justify-content: flex-end;
-    
+    padding: .5em 3em;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
 .user-info img.profile-pic {
