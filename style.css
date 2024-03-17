@@ -1323,6 +1323,8 @@ hr {
 .checkout-container
 {
     padding:3em;
+    max-height:100vh;
+    margin:50px auto;
 }
 .checkout{
     background-color: #ffffff;

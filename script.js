@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-// Payment Functionality//
+// Payment Functionality-toggle//
 
 
 var payMethodSelect = document.getElementById("pay-method");
@@ -204,6 +204,31 @@ var payMethodSelect = document.getElementById("pay-method");
     }
 
 
+
+// Payment Functionality-check enough points//
+
+    const pointsToRedeemInput = document.getElementById('points-to-redeem');
+    const availablePointsText = document.getElementById('available-points');
+    const submitButton = document.querySelector('.checkout button[type="submit"]');
+    const paymentForm = document.getElementById('payment-form');
+
+    // Proceed only if all required elements exist
+    if (paymentForm && pointsToRedeemInput && availablePointsText) {
+        paymentForm.addEventListener('submit', function(event) {
+            const selectedPaymentMethod = document.getElementById('pay-method').value;
+            const pointsToRedeem = parseInt(pointsToRedeemInput.value, 10);
+            const availablePoints = parseInt(availablePointsText.textContent, 10);
+
+            // Show alert if trying to redeem points less than 100
+            if (selectedPaymentMethod === 'points' && pointsToRedeem < 100) {
+                event.preventDefault(); // Prevent form submission
+                alert("You need at least 100 points to redeem for a ride.");
+            } else if (selectedPaymentMethod === 'points' && pointsToRedeem > availablePoints) {
+                event.preventDefault(); // Prevent form submission if trying to redeem more points than available
+                alert("You cannot redeem more points than you have available.");
+            }
+        });
+    }
 
     // HERE Maps API initialization
 
