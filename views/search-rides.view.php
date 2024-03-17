@@ -123,7 +123,7 @@ function handleRideDetails(rideId) {
        // window.location.href = '/signin'; // Redirect to the sign-in page
     } else {
         // If logged in, proceed to view details or book the ride
-        window.location.href = '/model/view-trip.model.php?ride_id=' + rideId;
+        window.location.href = '/view-ride?ride_id=' + rideId;
     }
 }
 </script>

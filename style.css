@@ -1228,6 +1228,69 @@ hr {
 {
     background-color: #65d268;
 }
+
+/* View ride details */
+.view-ride
+{
+    padding:5em;
+}
+.ride-details-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+   
+}
+
+.ride-details-container h1 {
+    color: #333;
+    text-align: center;
+}
+
+.ride-details > div {
+    margin-bottom: 20px;
+}
+
+.driver-info, .vehicle-info, .view-ride-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    
+}
+
+.driver-info img.vehicle-img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.ride-details-container h2, .ride-details-container h3 {
+    color: #444;
+    margin: 0 0 10px;
+}
+
+.ride-details-container p {
+    color: #666;
+    margin: 10px 0;
+}
+
+.ride-details-container button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width:20%;
+}
+.ride-details-container button:hover 
+{
+    background-color: #65d268;
+}
+
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
 
