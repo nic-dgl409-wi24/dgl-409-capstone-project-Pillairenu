@@ -41,7 +41,7 @@ try {
 <div class="checkout-container">
 <div class="checkout">
         <h2>Checkout</h2>
-        <div id="payment-form-message" style="color: red; display: none;"></div>
+        <div id="payment-form-message"></div>
 
         <form action="model/payment.model.php" method="POST" enctype="multipart/form-data" id="payment-form">
 

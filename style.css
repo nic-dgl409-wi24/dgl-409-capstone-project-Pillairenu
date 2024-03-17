@@ -1403,7 +1403,13 @@ hr {
 .checkout button[type="submit"]:hover {
     background-color: #45a049;
 }
-
+#payment-form-message
+{
+    color:rgb(237, 28, 28);
+    display: none;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
 
 /*-------------------Media query----------------*/
