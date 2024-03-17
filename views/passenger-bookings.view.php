@@ -14,7 +14,7 @@ $user_id = $_SESSION['user_id'];
 
 try {
     $stmt = $pdo->prepare("
-        SELECT rides.departure, rides.arrival, rides.time, bookings.booking_date
+        SELECT rides.ride_id, rides.departure, rides.arrival, rides.time, bookings.booking_date
         FROM bookings
         JOIN rides ON bookings.ride_id = rides.ride_id
         WHERE bookings.passenger_id = ?
@@ -40,8 +40,9 @@ try {
                     
                 </div>
                <div class="booking-btn-container">
-               <button>Pay Now</button>
-               </div>
+               <button onclick="location.href='/payment?ride_id=<?php echo $ride['ride_id']; ?>'">Pay Now</button>
+            
+            </div>
 
             </div>
         <?php endwhile; ?>

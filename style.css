@@ -1318,6 +1318,49 @@ hr {
 {
     background-color: #65d268;
 }
+/* payment */
+
+.checkout-container
+{
+    padding:3em;
+}
+.checkout{
+    background-color: #ffffff;
+    margin: auto;
+    padding: 3em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 500px;
+}
+
+.payment-type, #card-details, #points-details {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+
+
+.payment-type label, .card-details h3, .points-details h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#points-details p {
+    font-size: 16px;
+    color: #555;
+}
+
+#card-details {
+    background-color: #fff3cd; 
+}
+
+#points-details {
+    background-color: #d1ecf1; 
+}
+
 
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {

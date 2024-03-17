@@ -176,6 +176,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+// Payment Functionality//
+
+
+var payMethodSelect = document.getElementById("pay-method");
+    if (payMethodSelect) {
+        payMethodSelect.addEventListener('change', togglePaymentMethod);
+    }
+    togglePaymentMethod(); // Call on initial load in case of preset values or if using back button
+
+    function togglePaymentMethod() {
+        var paymentMethod = payMethodSelect.value;
+        var cardDetails = document.getElementById("card-details");
+        var pointsDetails = document.getElementById("points-details");
+
+        if(paymentMethod === "card") {
+            if (cardDetails && pointsDetails) {
+                cardDetails.style.display = "block";
+                pointsDetails.style.display = "none";
+            }
+        } else if(paymentMethod === "points") {
+            if (cardDetails && pointsDetails) {
+                cardDetails.style.display = "none";
+                pointsDetails.style.display = "block";
+            }
+        }
+    }
+
+
+
     // HERE Maps API initialization
 
     // Declare map variable in a higher scope to make it accessible throughout the script
