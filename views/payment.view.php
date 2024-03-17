@@ -29,8 +29,9 @@ require_once 'Database.php';
                 <p>Available Points: <span id="available-points">1000</span></p>
                 <input type="number" id="points-to-redeem" placeholder="Points to Redeem" min="1" max="1000" required>
             </div>
-            
+            <div class="button-container">
             <button type="submit">Submit Payment</button>
+            </div>
         </form>
     </div>
 </div>
