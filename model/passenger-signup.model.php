@@ -56,6 +56,10 @@ try {
 
         $stmt = $pdo->prepare("INSERT INTO user_roles (user_id, role_id) VALUES (?, (SELECT role_id FROM roles WHERE role_name = 'passenger'))");
         $stmt->execute([$userId]);
+
+        // Insert initial 100 points into the pointsbalance table
+        $stmt = $pdo->prepare("INSERT INTO pointsbalance (user_id, points_balance) VALUES (?, 100)");
+        $stmt->execute([$userId]);
  
          $pdo->commit();
         
