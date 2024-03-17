@@ -56,7 +56,7 @@ try {
         </div>
         <!-- Display booking button or sign-in prompt based on user session -->
    
-            <button onclick="location.href='/model/book-trip.model.php?ride_id=<?php echo $rideId; ?>'">Book Ride</button>
+        <button onclick="location.href='/model/book-trip.model.php?ride_id=<?php echo $rideId; ?>'">Book Trip</button>
     
     </div>
 </div>

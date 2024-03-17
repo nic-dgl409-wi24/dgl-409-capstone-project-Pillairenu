@@ -37,7 +37,12 @@ try {
                     <p>Destination: <?php echo htmlspecialchars($ride['arrival']); ?></p>
                     <p>Time: <?php echo htmlspecialchars($ride['time']); ?></p>
                     <p>Booking Date: <?php echo htmlspecialchars($ride['booking_date']); ?></p>
+                    
                 </div>
+               <div class="booking-btn-container">
+               <button>Pay Now</button>
+               </div>
+
             </div>
         <?php endwhile; ?>
     <?php else: ?>

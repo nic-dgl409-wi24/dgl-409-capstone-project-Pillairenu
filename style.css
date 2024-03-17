@@ -985,7 +985,7 @@ hr {
     grid-template-columns: auto 1fr 1fr auto; 
     align-items: center;
     gap: 20px; 
-    padding: 10px;
+    padding: 5px 35px;
     background-color: #cfffb3;
     border-radius: 5px;
 }
@@ -1018,20 +1018,25 @@ hr {
 }
 
 .ride button {
-    padding: 5px 10px;
+    padding: 10px;
     margin-top: 10px;
-    background-color:#EA9010;
+    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width:40%;
+    width:30%;
     
+}
+
+.ride button:hover
+{
+    background-color: #65d268;
 }
 /*-------------------Passenger Booking----------------*/
 
 .bookings-listing {
-    max-width: 600px;
+    max-width: 900px;
     margin: 20px auto;
     padding: 10px;
    min-height: 100vh;
@@ -1046,11 +1051,34 @@ hr {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     margin-bottom: 10px;
+   
+}
+.booking
+{
+    display:flex;
+    flex-direction: row;
     background-color: #cfffb3;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .ride-details p {
     margin: 5px 0;
+}
+.booking-btn-container button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 102%;
+}
+
+.booking-btn-container button:hover
+{
+    background-color: #65d268;
 }
 /*-------------------search a ride---------------*/
 .search-form {

@@ -42,8 +42,8 @@ try {
                 <p>Time: <?php echo htmlspecialchars($ride['time']); ?></p>
                 
             </div>
-            <!-- <button onclick="location.href='/model/book-trip.model.php?ride_id=<?php echo $ride['ride_id']; ?>'">Book Trip</button> -->
-            <button onclick="handleRideDetails('<?php echo $ride['ride_id']; ?>')">Book Trip</button>
+            <button onclick="location.href='/model/book-trip.model.php?ride_id=<?php echo $ride['ride_id']; ?>'">Book Trip</button>
+            <!-- <button onclick="handleRideDetails('<?php echo $ride['ride_id']; ?>')">Book Trip</button> -->
 
             </div>
         <?php endwhile; ?>
