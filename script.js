@@ -209,8 +209,9 @@ var payMethodSelect = document.getElementById("pay-method");
 
     const pointsToRedeemInput = document.getElementById('points-to-redeem');
     const availablePointsText = document.getElementById('available-points');
-    const submitButton = document.querySelector('.checkout button[type="submit"]');
     const paymentForm = document.getElementById('payment-form');
+    const paymentFormMessage = document.getElementById('payment-form-message');
+
 
     // Proceed only if all required elements exist
     if (paymentForm && pointsToRedeemInput && availablePointsText) {
@@ -222,10 +223,13 @@ var payMethodSelect = document.getElementById("pay-method");
             // Show alert if trying to redeem points less than 100
             if (selectedPaymentMethod === 'points' && pointsToRedeem < 100) {
                 event.preventDefault(); // Prevent form submission
-                alert("You need at least 100 points to redeem for a ride.");
+                paymentFormMessage.textContent = "You need at least 100 points to redeem for a ride.";
+                paymentFormMessage.style.display = 'block'; // Make the message visible
+
             } else if (selectedPaymentMethod === 'points' && pointsToRedeem > availablePoints) {
                 event.preventDefault(); // Prevent form submission if trying to redeem more points than available
-                alert("You cannot redeem more points than you have available.");
+                paymentFormMessage.textContent = "You cannot redeem more points than you have available.";
+                paymentFormMessage.style.display = 'block'; // Make the message visible
             }
         });
     }
