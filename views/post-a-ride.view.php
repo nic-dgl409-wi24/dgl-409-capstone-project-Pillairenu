@@ -1,7 +1,7 @@
 <?php require('partials/head.php');?>
 
 <?php require('partials/main_nav.php');
-session_start();
+
 
 ?>
  <div class="post-ride-container">

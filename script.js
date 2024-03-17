@@ -182,8 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 var payMethodSelect = document.getElementById("pay-method");
     if (payMethodSelect) {
         payMethodSelect.addEventListener('change', togglePaymentMethod);
-    }
-    togglePaymentMethod(); // Call on initial load in case of preset values or if using back button
+    // Call on initial load in case of preset values or if using back button
 
     function togglePaymentMethod() {
         var paymentMethod = payMethodSelect.value;
@@ -202,7 +201,8 @@ var payMethodSelect = document.getElementById("pay-method");
             }
         }
     }
-
+    togglePaymentMethod(); 
+}
 
 
 // Payment Functionality-check enough points//

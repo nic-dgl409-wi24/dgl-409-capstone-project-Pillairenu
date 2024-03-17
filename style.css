@@ -751,14 +751,20 @@ footer {
 
 /*-------------------Driver Dashboard----------------*/
 /* User info styling */
+.user-dashboard
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 .user-info {
     
-    background-color: #ffffff; /* White background for the user info bar */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    /* background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  */
     display:flex;
     align-items: center;
     padding: .5em 3em;
-    justify-content: space-evenly;
     flex-direction: row;
 }
 
@@ -888,7 +894,7 @@ footer {
 hr {
     border: 0; 
     height: 5px; 
-    width:10%;
+    width:30%;
     border-radius:2px;
     background-color:#CFFFB3;
     margin-top: 20px; 
@@ -905,6 +911,8 @@ hr {
 .heading
 {
     margin-left:12em;
+    margin-top: 2em;
+
 }
 .post-ride-form {
     display: grid;

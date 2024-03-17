@@ -3,7 +3,6 @@ require('partials/head.php');
 require('partials/main_nav.php');
 require_once 'Database.php';
 
-session_start();
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'passenger') {
     header('Location: /signin');
