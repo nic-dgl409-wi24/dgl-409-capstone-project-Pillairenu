@@ -48,7 +48,7 @@ try {
     die("Could not connect to the database: " . $e->getMessage());
 }
 ?>
-
+<div class="search-container">
 
 <div class="sidebar">
     <!-- Filters will go here -->
@@ -90,6 +90,7 @@ try {
         <p>No rides posted yet.</p>
     <?php endif; ?>
 </div>
+    </div> 
 <!-- Modal -->
 
 

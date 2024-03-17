@@ -1083,19 +1083,21 @@ hr {
     margin-top: 20px;
 }
 /*-------------------Search Function----------------*/
-
+.search-container
+{
+    display:flex;
+    flex-direction: row;
+    padding:1em;
+}
 /* Style for the aside container */
 .sidebar {
-    width: 200px;
+    width: 15%;
     background-color: #cfffb3;
     padding: 20px;
-    float: left;
-    /* height: 100vh; */
-    left: 17px;
     margin-left: 15px;
     margin-top: 50px;
-    height: 90%;
-   
+    
+    height: auto;
     
 }
 
@@ -1145,10 +1147,14 @@ hr {
     background-size: 12px; 
 }
 .main-content {
-    margin-left: 200px;
+    /* margin-left: 200px;
     padding: 50px;
     height:100vh;
-    
+     */
+    margin-left: 20px;
+    padding: 3em;
+    height: auto;
+    width:85%;
 }
 
 .search-form {
