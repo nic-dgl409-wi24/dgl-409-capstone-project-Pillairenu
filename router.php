@@ -19,7 +19,8 @@ $routes = [
     '/bookings'=>'controllers/passenger-bookings.php',
     '/search-rides'=>'controllers/search-rides.php',
     '/view-ride'=>'controllers/view-ride-controller.php',
-    '/payment'=>'controllers/payment-controller.php'
+    '/payment'=>'controllers/payment-controller.php',
+    '/payment-success'=>'controllers/payment-success-controller.php'
     
 ];
 

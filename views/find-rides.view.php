@@ -26,7 +26,7 @@ try {
 ?>
 <div class="rides-listing">
 <h2>Find Rides</h2>
-    <hr>
+    <hr class="hr">
     <?php if ($stmt->rowCount() > 0): ?>
     <?php while ($ride = $stmt->fetch()): ?>
         <div class="ride">

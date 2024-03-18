@@ -980,6 +980,11 @@ hr {
     flex-direction: column;
     min-height: 100vh;
 }
+.rides-listing h2{
+
+    font-size: 2rem;
+    color:#40531B;
+}
 .rides-listing .ride {
     /* display: flex;
     align-items: center;
@@ -1051,9 +1056,9 @@ hr {
 }
 .bookings-listing h2
 {  text-align: left;
-    
+    margin-top:20px;
     color: #40531B;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .booking .ride-details {
     padding: 10px;
@@ -1342,7 +1347,10 @@ hr {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     max-width: 500px;
 }
-
+.amount
+{
+margin:10px 0;
+}
 .payment-type, #card-details, #points-details {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -1419,7 +1427,73 @@ hr {
     text-align: center;
 }
 
+/* payment success */
+.wrapperAlert {
+    width: 500px;
+    height: auto;
+    overflow: hidden;  
+    border-radius: 12px;
+    border: thin solid #ddd;  /* Darker border color */
+    margin: 75px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Slight shadow for depth */
+                0 6px 20px rgba(0, 0, 0, 0.1); /* Larger shadow for visual separation */    
+  }
+  
+  .topHalf {
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    min-height: 250px;
+    position: relative;
+    padding: 40px 0;
+    text-align: center;
+    background: linear-gradient(to bottom right, #40531B, #6E8B3D);
+    display: grid;
+    place-items: center;
+  }
+  
+  .topHalf p {
+    margin-bottom: 30px;
 
+  }
+  svg {
+    fill: white;
+  }
+  .topHalf h1 {
+    font-size: 2.25rem;
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    text-shadow: 0 2px rgba(128, 128, 128, 0.6);
+  }
+          
+ 
+  
+  .bottomHalf {
+    align-items: center;
+    padding: 35px;
+    display: grid;
+    place-items: center;
+  }
+  .bottomHalf p {
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 12px;            
+    padding: 10px 18px;            
+    background-color: #40531B;
+    text-shadow: 0 1px rgba(128, 128, 128, 0.75);
+
+  }
+  button:hover {
+    background-color: #6E8B3D;
+  }
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
 

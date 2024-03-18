@@ -9,6 +9,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'passenger') {
 }
 
 $user_id = $_SESSION['user_id'];
+$rideId = $_GET['ride_id'] ?? null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay-method']) && $_POST['pay-method'] === 'points') {
     // The amount of points the user wants to redeem, adjust based on your form input
@@ -39,12 +40,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay-method']) && $_PO
 
             $pdo->commit();
             echo "Payment successful. Points redeemed and bonus points added.";
+            header('Location: /payment-success');
+            exit();
+
         } else {
             echo "Not enough points to redeem.";
         }
-    } catch (Exception $e) {
+    } 
+    catch (Exception $e) {
         $pdo->rollBack();
         die("Error processing payment: " . $e->getMessage());
     }
 }
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay-method']) && $_POST['pay-method'] ==='card') {
+    // Mock card payment
+    $amount = 0; // Assume this is fetched from the ride details
+    // For example:
+    $stmt = $pdo->prepare("SELECT price_per_seat FROM rides WHERE ride_id = :ride_id");
+    $stmt->execute(['ride_id' => $rideId]);
+    if ($ride = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $amount = $ride['price_per_seat'];
+    }
+
+    // Insert mock payment record
+    $stmt = $pdo->prepare("INSERT INTO payments (user_id, ride_id, amount, payment_method, payment_status) VALUES (:user_id, :ride_id, :amount, 'card', 'success')");
+    $stmt->execute(['user_id' => $user_id, 'ride_id' => $rideId, 'amount' => $amount]);
+
+    echo "Payment successful. Ride booked.";
+    header('Location: /payment-success');
+    exit();
+} 
+else {
+    echo "Ride details not found.";
+}
+
+
+
+
 ?>
