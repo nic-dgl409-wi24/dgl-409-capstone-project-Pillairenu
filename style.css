@@ -1068,11 +1068,12 @@ hr {
 }
 .booking
 {
-    display:flex;
+    display: flex;
     flex-direction: row;
     background-color: #cfffb3;
     align-items: center;
-    justify-content: space-around;
+    padding: 1em;
+    justify-content: space-between;
 }
 
 .ride-details p {

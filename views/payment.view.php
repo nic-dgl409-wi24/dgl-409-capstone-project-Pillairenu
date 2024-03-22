@@ -34,7 +34,8 @@ try {
     if ($points) {
         $points_balance = $points['points_balance'];
     } else {
-        echo "No points balance found.";
+        $points_balance =0;
+         "No points balance found.";
     }
 } catch (Exception $e) {
     die("Error: " . $e->getMessage());
