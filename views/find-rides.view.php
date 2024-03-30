@@ -19,6 +19,13 @@ try {
         JOIN users ON rides.user_id = users.user_id
         
     ");
+       // Fetch all rows
+    //    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    //    // Check the data
+    //    echo "<pre>";
+    //    print_r($rows);
+    //    echo "</pre>";
     
 } catch (Exception $e) {
     die("Error fetching rides: " . $e->getMessage());
@@ -31,7 +38,18 @@ try {
     <?php while ($ride = $stmt->fetch()): ?>
         <div class="ride">
         <div class="rider-info">
-            <img src="images/<?php echo htmlspecialchars($ride['profile_photo_path'] ?: 'images/person.png'); ?>" alt="Driver's Profile Picture" class="profile-pic">
+        <?php
+// Assuming $ride['profile_photo_path'] is your variable
+$ride['profile_photo_path'] ;
+$profilePhotoPath = !empty($ride['profile_photo_path']) ? $ride['profile_photo_path'] : 'person.png';
+$profilePhotoPath = htmlspecialchars($profilePhotoPath);
+?>
+
+<img src="images/<?php echo $profilePhotoPath; ?>" alt="Driver's Profile Picture" class="profile-pic">            
+            
+            
+ 
+            
             <h4><?php echo htmlspecialchars($ride['name']); ?></h4>
     </div>
             <div class="ride-details">

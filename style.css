@@ -1009,6 +1009,8 @@ hr {
     height: 50px;
     border-radius: 50%;
     margin-right: 15px;
+    border: 2px solid white;
+    object-fit: cover;
 }
 
 
