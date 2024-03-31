@@ -784,8 +784,9 @@ footer {
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    padding:2em;
 }
 .user-info {
     
@@ -825,8 +826,9 @@ footer {
     display: flex;
     justify-content: center;
     gap: 100px; /* Space between cards */
-    padding: 5em; /* Padding around the cards */
     perspective: 1000px; /* Provides depth to the flip effect */
+    padding-top:4em;
+    padding-bottom: 10em;
 }
 
 .dashboard-card {
@@ -937,12 +939,12 @@ hr {
     margin-top: 20px; 
     margin-bottom: 20px; 
 }
-.heading
+/* .heading
 {
     margin-left:12em;
     margin-top: 2em;
 
-}
+} */
 .post-ride-form {
     display: grid;
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
@@ -1686,5 +1688,11 @@ margin:10px 0;
     .registration-form {
         padding: 20px; /* Reduced padding */
         max-width: 100%; /* Allows some space on very small screens */
+    }
+    .dashboard-cards {
+        
+    
+        flex-direction: column;
+        align-items: center;
     }
     }

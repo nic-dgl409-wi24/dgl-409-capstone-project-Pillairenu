@@ -38,7 +38,7 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
         </div>
         <div class="user-info">
         <img src="images/person.png" alt="Profile Picture" class="profile-pic">
-        <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
+        <span><?php echo "Hi ".htmlspecialchars($user['name'])."!"; ?></span>
     </div>
     </div>
     <div class="dashboard-cards">
