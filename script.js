@@ -346,6 +346,32 @@ if (document.getElementById("mapContainer")) {
             }
         }
         
+        var cancelButton = document.getElementById("cancel-button"); // Selecting single button by ID
 
+        // Proceed only if the cancel button exists
+        if (cancelButton) {
+            var modal = document.getElementById("cancelModal");
+            var span = document.getElementsByClassName("close")[0];
+            var closeModal = document.getElementById("closeModal");
+
+            // Setup event listener for the cancel button
+            cancelButton.addEventListener('click', function() {
+                var bookingId = cancelButton.getAttribute('data-booking-id');
+                document.getElementById("confirmCancel").onclick = function() {
+                    location.href = '/model/cancel_booking.model.php?booking_id=' + bookingId;
+                };
+                modal.style.display = "block";
+            });
+    
+            // Close modal actions
+            span.onclick = closeModal.onclick = function() {
+                modal.style.display = "none";
+            };
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        }
 
 });

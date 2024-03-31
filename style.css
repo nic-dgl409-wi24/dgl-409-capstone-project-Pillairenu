@@ -714,7 +714,8 @@ footer {
     background-color:#EA9010;
     border:none;
     padding: 6px 20px;
-    width: 15%;
+    /* width: 15%; */
+    float: right;
 }
 
 
@@ -747,7 +748,35 @@ footer {
     text-align: center;
     color:#333;
 }
+#confirmCancel {
+    margin-top:20px;
+    background-color: rgb(51, 162, 51); /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Text size */
+}
 
+#confirmCancel:hover {
+    background-color: rgb(76, 130, 76); /* Darker green on hover */
+}
+
+#closeModal {
+    margin-top:20px;
+    background-color: rgb(217 47 47); /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Text size */
+}
+
+#closeModal:hover {
+    background-color: darkred; /* Darker red on hover */
+}
 
 /*-------------------Driver Dashboard----------------*/
 /* User info styling */
@@ -1051,7 +1080,7 @@ hr {
 /*-------------------Passenger Booking----------------*/
 
 .bookings-listing {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 10px;
    min-height: 100vh;
@@ -1075,27 +1104,48 @@ hr {
     background-color: #cfffb3;
     align-items: center;
     padding: 1em;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .ride-details p {
     margin: 5px 0;
 }
-.booking-btn-container button {
-    padding: 10px 15px;
-    margin-top: 10px;
+.booking-btn-container
+{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+   
+}
+.booking-btn-container #pay-button{
+   
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 102%;
+    width: 100%;
 }
 
-.booking-btn-container button:hover
+.booking-btn-container #pay-button:hover
 {
     background-color: #65d268;
+   
 }
+.booking-btn-container #cancel-button 
+{
+    background-color: #e46656;
+    
+    border-radius: 5px;
+   
+
+}
+.booking-btn-container #cancel-button:hover{
+    background-color: #cf7d72;
+
+}
+
+
 /*-------------------search a ride---------------*/
 .search-form {
     margin-bottom: 20px;
@@ -1491,7 +1541,7 @@ margin:10px 0;
     font-weight: 500;
     border-radius: 12px;            
     padding: 10px 18px;     
-    background-color: #96bc54;
+    background-color: #6E8B3D;
        
 
   }
