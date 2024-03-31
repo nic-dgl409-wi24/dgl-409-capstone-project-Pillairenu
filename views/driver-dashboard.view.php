@@ -57,14 +57,14 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
         </a>
     </div>
     <div class="dashboard-card">
-    <a href="/post-an-event">
+    <a href="/manage-bookings">
             <div class="card-inner">
                 <div class="card-front">
-                <img src="images/post_event.png" alt="Profile Picture" class="profile-pic">
+                <img src="images/booking.png" alt="Profile Picture" class="profile-pic">
 
                 </div>
                 <div class="card-back">
-                <h3>Post an Event</h3>
+                <h3>Bookings</h3>
                    
                 </div>
             </div>

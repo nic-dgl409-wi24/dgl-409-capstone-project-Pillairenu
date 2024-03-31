@@ -31,12 +31,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay-method']) && $_PO
             $updateStmt = $pdo->prepare("UPDATE pointsbalance SET points_balance = :new_balance WHERE user_id = :user_id");
             $updateStmt->execute(['new_balance' => $newBalance, 'user_id' => $user_id]);
 
-            // Record the transaction
-            $transactionStmt = $pdo->prepare("INSERT INTO PointsTransactions (user_id, points, transaction_type, description) VALUES (:user_id, :points, 'redeem', 'Redeemed points for ride')");
-            $transactionStmt->execute(['user_id' => $user_id, 'points' => -$pointsToRedeem]);
+           // Record the points redemption transaction
+        $transactionStmt = $pdo->prepare("INSERT INTO PointsTransactions (user_id, points, transaction_type, description) VALUES (:user_id, :points, 'redeem', 'Redeemed points for ride')");
+        $transactionStmt->execute(['user_id' => $user_id, 'points' => -$pointsToRedeem]);
 
-            $bonusStmt = $pdo->prepare("INSERT INTO PointsTransactions (user_id, points, transaction_type, description) VALUES (:user_id, :points, 'earn', 'Bonus points for booking ride')");
-            $bonusStmt->execute(['user_id' => $user_id, 'points' => 20]);
+        // Record the bonus points transaction
+        $bonusStmt = $pdo->prepare("INSERT INTO PointsTransactions (user_id, points, transaction_type, description) VALUES (:user_id, :points, 'earn', 'Bonus points for booking ride')");
+        $bonusStmt->execute(['user_id' => $user_id, 'points' => 20]);
+
+        // Insert payment record for points payment
+        $paymentStmt = $pdo->prepare("INSERT INTO payments (user_id, ride_id, amount, payment_method, payment_status) VALUES (:user_id, :ride_id, :amount, 'points', 'success')");
+        $paymentStmt->execute(['user_id' => $user_id, 'ride_id' => $rideId, 'amount' => 0]); // Assuming amount is 0 for points payment
 
             $pdo->commit();
             echo "Payment successful. Points redeemed and bonus points added.";
