@@ -373,5 +373,43 @@ if (document.getElementById("mapContainer")) {
                 }
             };
         }
-
+       
+ if( document.querySelectorAll('.star'))
+ {
+    document.querySelectorAll('.star').forEach(function(star) {
+        star.addEventListener('click', function() {
+            currentRating = this.getAttribute('data-value');
+            // Visual update for stars based on selection
+            document.querySelectorAll('.star').forEach(function(star) {
+                star.style.color = star.getAttribute('data-value') <= currentRating ? 'gold' : 'gray';
+            });
+        });
+    });
+    }
+    
 });
+function showCompletionModal() {
+    document.getElementById('completionModal').style.display = 'flex';
+}
+
+function hideCompletionModal() {
+    document.getElementById('completionModal').style.display = 'none';
+}
+
+function submitRating(rating) {
+    fetch('/submit-rating.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: `rating=${rating}&bookingId=${currentBookingId}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        if(data.success) {
+            alert('Rating submitted successfully.');
+            hideCompletionModal();
+        } else {
+            alert('Failed to submit rating.');
+        }
+    })
+    .catch(error => console.error('Error submitting rating:', error));
+}

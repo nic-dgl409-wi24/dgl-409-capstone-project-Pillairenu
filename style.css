@@ -1551,20 +1551,33 @@ margin:10px 0;
     background-color: rgba(133, 194, 41, 0.6);
   }
   /* General styling for the booking list */
+  .finish-booking
+  {
+
+    display: flex;
+    flex-direction: row;
+    background-color: #cfffb3;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+  }
 .booking-manage {
-    border: 1px solid #ddd;
+   
     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
 /* Styling for passenger photo */
-.booking-manage img {
-    width:50px;
+.booking-manage-image {
+    width:120px;
+    height:120px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid white;
+    object-fit: cover;
 }
 
 /* Paragraph styling within a booking */
@@ -1585,6 +1598,7 @@ margin:10px 0;
     font-size: 16px;
     text-align: center;
     transition: background-color 0.3s ease;
+    width:100%;
 }
 
 .mark-completed:hover {
@@ -1596,7 +1610,15 @@ margin:10px 0;
     background-color: #ccc; /* Grayed out */
     cursor: not-allowed;
 }
-
+.star-rating .star {
+    font-size: 30px;
+    cursor: pointer;
+    color: gray;
+}
+.star-rating .star:hover,
+.star-rating .star:hover ~ .star {
+    color: gold;
+}
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
 
