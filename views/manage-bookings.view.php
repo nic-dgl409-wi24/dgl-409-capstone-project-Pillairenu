@@ -44,6 +44,10 @@ $profilePicPath = !empty($booking['profile_photo_path']) ? $booking['profile_pho
 ?>
 
 <div class="bookings-listing">
+<div class="dashboard-heading">
+        <h2 class="page-title">Complete Ride</h2>
+        <hr class="complete-hr">
+        </div>
     <?php if (!empty($bookings)): ?>
         <?php foreach ($bookings as $booking): ?>
             <div class="finish-booking">
@@ -58,7 +62,9 @@ $profilePicPath = !empty($booking['profile_photo_path']) ? $booking['profile_pho
                 </div>
                 <div class="booking-details-button">
         <!-- Other booking details here -->
-        <button class="mark-completed" data-booking-id="<?php echo $booking['booking_id']; ?>">Mark as Completed</button>
+        <button class="mark-completed" id="markAsCompletedButton" data-booking-id="<?php echo $booking['booking_id']; ?>" onclick="showCompletionModal(this);">Mark as Completed</button>
+
+</div>
         </div>
         <?php endforeach; ?>
     <?php else: ?>
@@ -80,7 +86,13 @@ $profilePicPath = !empty($booking['profile_photo_path']) ? $booking['profile_pho
                 <span class="star" data-value="1">&#9733;</span>
             </div>
         </div>
-        <button style="margin-top: 20px;" onclick="submitRating(currentRating)">Submit Rating</button>
+       
+        
+        <form id="ratingForm" action="model/submit-rating-model.php" method="POST">
+        <input type="hidden" id="hiddenRating" name="rating" value="">
+        <input type="hidden" id="hiddenBookingId" name="bookingId" value="<?php echo $booking['booking_id']; ?>">
+        </form>
+        <button id="submitRatingButton" style="margin-top: 20px;" onclick="submitRating()">Submit Rating</button>
         <button style="margin-top: 20px;"onclick="hideCompletionModal()">Close</button>
     </div>
 </div>

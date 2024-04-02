@@ -1619,6 +1619,12 @@ margin:10px 0;
 .star-rating .star:hover ~ .star {
     color: gold;
 }
+.complete-hr
+{
+    margin-bottom: 30px;
+    width: 15%;
+    margin-top: 5px;
+}
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
 
