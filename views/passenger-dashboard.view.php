@@ -22,6 +22,26 @@ try {
     if (!$user) {
         throw new Exception("User not found.");
     }
+
+        // Fetch average rating for the user
+        $ratingStmt = $pdo->prepare("SELECT AVG(rating_value) AS average_rating FROM ratings WHERE ratee_id = ? AND rating_type = 'passenger'");
+        $ratingStmt->execute([$user_id]);
+        $ratingResult = $ratingStmt->fetch();
+
+        $averageRating = $ratingResult ? round($ratingResult['average_rating'], 1) : "Not rated yet";
+        $fullStar = "★"; // Full star symbol
+        $halfStar = "½"; // Half star symbol (optional, depending on your design)
+        $emptyStar = "☆"; // Empty star symbol
+        $maxStars = 5;
+
+        // Convert average rating to the nearest half-star for visual representation
+        $roundedRating = round($averageRating * 2) / 2;
+
+        // Calculate the number of full and empty stars
+        $fullStars = floor($roundedRating);
+        $halfStars = $roundedRating - $fullStars >= 0.5 ? 1 : 0;
+        $emptyStars = $maxStars - $fullStars - $halfStars;
+
 } catch (Exception $e) {
     // Handle error - user not found or database error
     die("Error: " . $e->getMessage());
@@ -40,9 +60,27 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
         <h2 class="page-title">My Dashboard</h2>
         <hr>
         </div>
+        
         <div class="user-info">
         <img src="images/person.png" alt="Profile Picture" class="profile-pic">
+        <div class="average-rating">
         <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
+         <!-- Display average rating -->
+         <div class="user-rating">
+        <?php
+         // Display full stars
+        echo str_repeat($fullStar, $fullStars);
+        
+        // Display half star, if any
+        if ($halfStars) {
+            echo $halfStar;
+        }
+
+        // Display empty stars
+        echo str_repeat($emptyStar, $emptyStars);
+        ?>
+        </div>
+        </div>
     </div>
     </div>
     <div class="dashboard-cards">

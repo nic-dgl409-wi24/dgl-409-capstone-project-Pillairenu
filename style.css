@@ -1625,6 +1625,11 @@ margin:10px 0;
     width: 15%;
     margin-top: 5px;
 }
+.average-rating
+{
+    display: flex;
+    flex-direction: column;
+}
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
 

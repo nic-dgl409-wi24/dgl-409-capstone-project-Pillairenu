@@ -12,7 +12,7 @@ $driverId = $_SESSION['user_id']; // Assuming the driver's user ID is stored in 
 
 try {
     $query = "
-    SELECT 
+    SELECT DISTINCT 
     bookings.booking_id, 
     users.name AS passenger_name, 
     users.profile_photo_path, 
@@ -20,16 +20,14 @@ try {
     rides.arrival, 
     rides.date, 
     rides.time,
-    payments.amount,
-    payments.payment_method,
-    payments.payment_status,
-    payments.payment_date
-FROM payments
-JOIN bookings ON payments.ride_id = bookings.ride_id
-JOIN rides ON bookings.ride_id = rides.ride_id
-JOIN users ON bookings.passenger_id = users.user_id
-WHERE rides.user_id= ? AND payments.payment_status = 'success'
-ORDER BY payments.payment_date DESC;
+    payments.payment_status
+    FROM payments
+    JOIN bookings ON payments.ride_id = bookings.ride_id
+    JOIN rides ON payments.ride_id = rides.ride_id
+    JOIN users ON bookings.passenger_id = users.user_id
+    WHERE rides.user_id= ? AND payments.payment_status = 'success'
+    ORDER BY payments.payment_date DESC;
+
     ";
 
     $stmt = $pdo->prepare($query);
