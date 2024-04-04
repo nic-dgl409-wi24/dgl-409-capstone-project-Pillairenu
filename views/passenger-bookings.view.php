@@ -39,6 +39,8 @@ try {
                     <p>Booking Date: <?php echo htmlspecialchars($ride['booking_date']); ?></p>
                     
                 </div>
+
+                
                <div class="booking-btn-container">
                <button onclick="location.href='/payment?ride_id=<?php echo $ride['ride_id']; ?>'" id="pay-button">Pay Now</button>
                <button id="cancel-button" data-booking-id="<?php echo $ride['booking_id']; ?>">Cancel</button>

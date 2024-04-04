@@ -64,7 +64,7 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
 
                 </div>
                 <div class="card-back">
-                <h3>Bookings</h3>
+                <h3>Manage Rides</h3>
                    
                 </div>
             </div>
