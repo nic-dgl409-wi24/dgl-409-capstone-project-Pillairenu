@@ -68,16 +68,27 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
          <!-- Display average rating -->
          <div class="user-rating">
         <?php
-         // Display full stars
-        echo str_repeat($fullStar, $fullStars);
+        if ($averageRating > 0) {
+            // Display full stars
+            echo str_repeat($fullStar, $fullStars);
+            
+            // Display half star, if any
+            if ($halfStars) {
+                echo $halfStar;
+            }
         
-        // Display half star, if any
-        if ($halfStars) {
-            echo $halfStar;
+            // Display empty stars
+            echo str_repeat($emptyStar, $emptyStars);
+        } else {
+            // No stars are displayed if the average rating is 0 or "Not rated yet"
+            // Optionally, display a message if there are no positive ratings
+            if ($averageRating === 0) {
+                echo "No positive ratings yet."; // This message is optional and can be customized
+            } else {
+                // If $averageRating is "Not rated yet", it will display that message
+                echo "No ratings yet.";;
+            }
         }
-
-        // Display empty stars
-        echo str_repeat($emptyStar, $emptyStars);
         ?>
         </div>
         </div>
