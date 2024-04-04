@@ -1630,6 +1630,13 @@ margin:10px 0;
     display: flex;
     flex-direction: column;
 }
+.user-rating .full-star, .half-star {
+    color: gold;
+}
+
+.empty-star {
+    color: #ccc; /* Light gray color for empty stars */
+}
 /*-------------------Media query----------------*/
 @media only screen and (max-width: 768px) {
 
