@@ -42,9 +42,31 @@ try {
 
                 
                <div class="booking-btn-container">
-               <button onclick="location.href='/payment?ride_id=<?php echo $ride['ride_id']; ?>'" id="pay-button">Pay Now</button>
-               <button id="cancel-button" data-booking-id="<?php echo $ride['booking_id']; ?>">Cancel</button>
+                <?php
+                
+                $paymentStmt = $pdo->prepare("
+                SELECT payment_status
+                FROM payments
+                WHERE user_id = ? AND ride_id = ?
+                ");
+                $paymentStmt->execute([$user_id, $ride['ride_id']]);
+                $paymentStatus = $paymentStmt->fetchColumn();
+                // var_dump($paymentStatus);
+                // exit();
+                if ($paymentStatus === 'success') {
+                    // If payment status is 'success', disable the button
+                    echo '<button  id="pay-button" disabled>Paid</button>';
+                    echo '<button id="cancel-button" hidden>Cancel</button>';
 
+                } else {
+                    // If payment status is not 'success', allow payment
+                    echo '<button onclick="location.href=\'/payment?ride_id=' . $ride['ride_id'] . '\'" id="pay-button">Pay Now</button>';
+                    echo '<button id="cancel-button" data-booking-id="' . $ride['booking_id'] . '">Cancel</button>';
+
+                }
+                ?>
+                
+              
 
             </div>
 
