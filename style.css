@@ -1249,7 +1249,7 @@ hr {
      */
     margin-left: 20px;
     padding: 3em;
-    height: auto;
+    height: 100vh;
     width:85%;
 }
 
@@ -1259,13 +1259,16 @@ hr {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    flex-direction: row;
+    gap:20px;
 }
 
 .search-form input {
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ccc;
-    width:35%;
+    width:45%;
+   
 }
 
 .search-form button {
@@ -1274,7 +1277,7 @@ hr {
     color: white;
     border: none;
     cursor: pointer;
-    width:15%;
+    width:25%;
 }
 .search-form button:hover
 {
@@ -1781,5 +1784,113 @@ margin:10px 0;
     
         flex-direction: column;
         align-items: center;
+    }
+    .sidebar {
+        width: 80%;
+        background-color: #cfffb3;
+        padding: 20px;
+       
+    }
+    
+    .sidebar label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .sidebar input[type="date"],
+    .sidebar select {
+        
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    
+    .sidebar input[type="date"]:focus,
+    .sidebar select:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, .5);
+    }
+    
+    .main-content {
+        margin-top: 30px;
+        margin-left: 0;
+        padding: 1em;
+        width: 100%;
+    }
+    
+    .search-form {
+        background-color: #cfffb3;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+   
+    .search-form input,
+    .search-form button {
+        flex: 0 0 calc(50% - 10px);
+        margin-bottom: 10px;
+        width:100%;
+    }
+    
+    .search-form button {
+        width: auto;
+    }
+    
+    .ride-list {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    
+    .rides {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .ride-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    
+    .ride-info {
+        flex-grow: 1;
+        margin-left: 20px;
+    }
+    
+    .ride-info p {
+        margin-bottom: 10px;
+    }
+    
+    .book-btn {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        width: auto;
+        margin-top: 10px;
+    }
+    
+    .book-btn:hover {
+        background-color: #65d268;
     }
     }
