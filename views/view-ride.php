@@ -44,7 +44,7 @@ try {
         </div>
         <div class="vehicle-info">
             <h3>Vehicle Details</h3>
-            <img src="images/<?php echo htmlspecialchars($rideDetails['vehicle_photo_path'] ?? 'default-vehicle.jpg'); ?>" alt="Vehicle Image" class="vehicle-img">
+            <img src="images/<?php echo htmlspecialchars($rideDetails['vehicle_photo_path'] ?? 'car.png'); ?>" alt="Vehicle Image" class="vehicle-img">
             <p>Make and Model: <?php echo htmlspecialchars($rideDetails['vehicle_make_model']); ?></p>
         </div>
         <div class="view-ride-info">
@@ -56,8 +56,13 @@ try {
         </div>
         <!-- Display booking button or sign-in prompt based on user session -->
    
-        <button onclick="location.href='/model/book-trip.model.php?ride_id=<?php echo $rideId; ?>'">Book Trip</button>
-    
+        <?php
+// Check if the user is logged in and is not a driver
+if (isset($_SESSION['user_id']) && $_SESSION['role'] !== 'driver') {
+    // Display the "Book Trip" button
+    echo '<button onclick="location.href=\'/model/book-trip.model.php?ride_id=' . $rideId . '\'">Book Trip</button>';
+}
+?>    
     </div>
 </div>
 </div>
