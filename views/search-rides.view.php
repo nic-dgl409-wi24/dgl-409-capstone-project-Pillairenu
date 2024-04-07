@@ -4,7 +4,7 @@ require_once 'Database.php';
 require('partials/head.php');
 require('partials/main_nav.php');
 
-$userLoggedIn = isset($_SESSION['user_id']) && $_SESSION['role'] === 'passenger';
+$userLoggedIn = isset($_SESSION['user_id']) && ($_SESSION['role'] === 'passenger' || $_SESSION['role'] === 'driver');
 
 try {
     // Start with a base SQL query
