@@ -12,7 +12,8 @@ $driverId = $_SESSION['user_id']; // Assuming the driver's user ID is stored in 
 
 try {
     $query = "
-    SELECT DISTINCT 
+    SELECT DISTINCT
+    payments.payment_id, 
     bookings.booking_id, 
     users.name AS passenger_name, 
     users.profile_photo_path, 
@@ -25,7 +26,7 @@ try {
     JOIN bookings ON payments.ride_id = bookings.ride_id
     JOIN rides ON payments.ride_id = rides.ride_id
     JOIN users ON bookings.passenger_id = users.user_id
-    WHERE rides.user_id= ? AND payments.payment_status = 'success'
+    WHERE payments.user_id = bookings.passenger_id AND rides.user_id= ? AND payments.payment_status = 'success'
     ORDER BY payments.payment_date DESC;
 
     ";
@@ -59,8 +60,32 @@ $profilePicPath = !empty($booking['profile_photo_path']) ? $booking['profile_pho
                     <p> Time: <?php echo htmlspecialchars($booking['time']); ?></p>
                 </div>
                 <div class="booking-details-button">
+
+                <?php
+
+                $ratingQuery = "
+                SELECT
+                    rating_id
+                FROM
+                    ratings
+                WHERE
+                    booking_id = ? AND
+                    rater_id = ? AND
+                    rating_type = 'passenger';
+                ";
+
+                $stmt = $pdo->prepare($ratingQuery);
+                $stmt->execute([$booking['booking_id'], $driverId]);
+                $rating = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+                // Check if a rating exists
+                if ($rating) { 
+                    echo '<button disabled>Ride Completed</button>'; // Disable button if rating exists
+                } else { 
+                    echo '<button class="mark-completed" id="markAsCompletedButton" data-booking-id="' . $booking['booking_id'] . '" onclick="showCompletionModal(this);">Mark as Completed</button>';
+                }
+                ?>
         <!-- Other booking details here -->
-        <button class="mark-completed" id="markAsCompletedButton" data-booking-id="<?php echo $booking['booking_id']; ?>" onclick="showCompletionModal(this);">Mark as Completed</button>
 
 </div>
         </div>
@@ -88,9 +113,10 @@ $profilePicPath = !empty($booking['profile_photo_path']) ? $booking['profile_pho
         
         <form id="ratingForm" action="model/submit-rating-model.php" method="POST">
         <input type="hidden" id="hiddenRating" name="rating" value="">
-        <input type="hidden" id="hiddenBookingId" name="bookingId" value="<?php echo $booking['booking_id']; ?>">
-        </form>
+        <input type="hidden" id="hiddenBookingId" name="bookingId" value="">
+       
         <button id="submitRatingButton" style="margin-top: 20px;" onclick="submitRating()">Submit Rating</button>
+        </form>
         <button style="margin-top: 20px;"onclick="hideCompletionModal()">Close</button>
     </div>
 </div>

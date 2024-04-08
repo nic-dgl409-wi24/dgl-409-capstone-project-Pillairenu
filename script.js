@@ -392,47 +392,36 @@ if (document.getElementById("mapContainer")) {
         });
     });
    
-    }
-    if (sessionStorage.getItem('ratingSubmitted') === 'true') {
-        document.getElementById('markAsCompletedButton').disabled = true;
-    }
+}
+
 });
 let currentBookingId; // Define this variable in the global scope
 function showCompletionModal(buttonElement) {
-    // Retrieve the booking ID from the element's data-booking-id attribute
-    currentBookingId = buttonElement.getAttribute('data-booking-id');
-    
-    // Log the booking ID to the console
-    console.log('Booking ID:', currentBookingId);
-    
-    // Proceed with showing the modal or any other operations you need
-    document.getElementById('completionModal').style.display = 'flex';
+// Retrieve the booking ID from the element's data-booking-id attribute
+currentBookingId = buttonElement.getAttribute('data-booking-id');
+
+// Log the booking ID to the console
+console.log('Booking ID:', currentBookingId);
+
+// Proceed with showing the modal or any other operations you need
+document.getElementById('completionModal').style.display = 'flex';
 }
 function hideCompletionModal() {
-    document.getElementById('completionModal').style.display = 'none';
+document.getElementById('completionModal').style.display = 'none';
 }
 
 function submitRating() {
-    // Retrieve the values from the hidden inputs
-    const rating = document.getElementById('hiddenRating').value;
-    const bookingId = document.getElementById('hiddenBookingId').value;
-    
-    // Log values for debugging purposes
-    console.log('Submitting rating:', rating, 'for booking ID:', bookingId);
-    const markAsCompletedButton = document.getElementById('markAsCompletedButton');
-    
-    if (!sessionStorage.getItem('ratingSubmitted')) {
-        // Assuming your form has an ID 'ratingForm'
-        document.getElementById('ratingForm').submit();
+// Retrieve the values from the hidden inputs
+const rating = document.getElementById('hiddenRating').value;
+const bookingId = currentBookingId;
 
-        // Set the flag right after submitting the form
-        sessionStorage.setItem('ratingSubmitted', 'true');
+// Log values for debugging purposes
+console.log('Submitting rating:', rating, 'for booking ID:', bookingId);
 
-        // Disable the "Mark as Completed" button to prevent further submissions
-        markAsCompletedButton.disabled = true;
-    } else {
-        // Optionally, handle the case where the form has already been submitted
-        markAsCompletedButton.disabled = true;
-        console.log('Rating has already been submitted.');
-    }
+
+document.getElementById('hiddenBookingId').value = bookingId;
+
+document.getElementById('ratingForm').submit();
+
+
 }
