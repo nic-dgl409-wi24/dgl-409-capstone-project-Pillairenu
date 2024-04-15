@@ -796,11 +796,12 @@ footer {
     align-items: center;
     padding: .5em 3em;
     flex-direction: row;
+    gap:10px;
 }
 
 .user-info img.profile-pic {
     width: 80px; /* Adjust based on your preference */
-   
+    height:80px;
     border-radius: 50%; /* Circular profile pictures */
     
 }

@@ -46,10 +46,8 @@ try {
     // Handle error - user not found or database error
     die("Error: " . $e->getMessage());
 }
-// Path to default profile picture
-$defaultProfilePic = "images/person.png"; // Update this path to your default image location
-$user['profile_photo_path'];
-$profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_path'] : $defaultProfilePic;
+
+
 ?>
 
 <div class="driver-dashboard">
@@ -62,7 +60,13 @@ $profilePicPath = !empty($user['profile_photo_path']) ? $user['profile_photo_pat
         </div>
         
         <div class="user-info">
-        <img src="images/person.png" alt="Profile Picture" class="profile-pic">
+            
+        <?php if ($user['profile_photo_path']): ?>
+         <img src="model/uploads/<?php echo $user['profile_photo_path'] ?>" alt="Profile Picture" class="profile-pic">
+            <?php else: ?>
+            <img src="images/person.png" alt="Default Profile Picture" class="profile-pic">
+        <?php endif; ?>
+
         <div class="average-rating">
         <span><?php echo "Welcome ".htmlspecialchars($user['name'])."!"; ?></span>
          <!-- Display average rating -->
