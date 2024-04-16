@@ -1251,7 +1251,7 @@ hr {
      */
     margin-left: 20px;
     padding: 3em;
-    height: 100vh;
+    min-height: 100vh;
     width:85%;
 }
 
@@ -1290,6 +1290,7 @@ hr {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
+    overflow: auto;
 }
 
 .rides {
