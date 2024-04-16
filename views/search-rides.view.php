@@ -75,7 +75,13 @@ try {
         <div class="ride-list">
             <?php while ($ride = $stmt->fetch()): ?>
                 <div class="rides">
-                    <img src="images/<?php echo htmlspecialchars($ride['profile_photo_path'] ?: 'person.png'); ?>" alt="Driver" class="ride-photo">
+                   
+                    <?php if ($ride['profile_photo_path']): ?>
+                     <img src="model/uploads/<?php echo $ride['profile_photo_path'] ?>" alt="Driver" class="ride-photo">
+                    <?php else: ?>
+                      <img src="images/person.png" alt="Default Profile Picture" alt="Driver" class="ride-photo">
+                   <?php endif; ?>
+                   
                     <div class="ride-info">
                         <p><strong><?php echo htmlspecialchars($ride['name']); ?></strong></p>
                         <p><b>Time:</b> <?php echo htmlspecialchars($ride['time']); ?></p>
