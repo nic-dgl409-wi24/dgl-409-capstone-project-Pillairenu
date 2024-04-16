@@ -44,7 +44,16 @@ try {
         </div>
         <div class="vehicle-info">
             <h3>Vehicle Details</h3>
-            <img src="images/<?php echo htmlspecialchars($rideDetails['vehicle_photo_path'] ?? 'car.png'); ?>" alt="Vehicle Image" class="vehicle-img">
+            
+            
+            <?php if ($rideDetails['vehicle_photo_path']): ?>
+                     <img src="model/uploads/<?php echo $rideDetails['vehicle_photo_path'] ?>" alt="Vehicle Image" class="vehicle-img">
+                    <?php else: ?>
+                      <img src="images/car.png" alt="Default Profile Picture" alt="Vehicle Image" class="vehicle-img">
+            <?php endif; ?>
+            
+            
+            
             <p>Make and Model: <?php echo htmlspecialchars($rideDetails['vehicle_make_model']); ?></p>
         </div>
         <div class="view-ride-info">

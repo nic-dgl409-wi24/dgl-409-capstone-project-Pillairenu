@@ -45,9 +45,13 @@ $profilePhotoPath = !empty($ride['profile_photo_path']) ? $ride['profile_photo_p
 $profilePhotoPath = htmlspecialchars($profilePhotoPath);
 ?>
 
-<img src="images/<?php echo $profilePhotoPath; ?>" alt="Driver's Profile Picture" class="profile-pic">            
+         
             
-            
+<?php if ($ride['profile_photo_path']): ?>
+                     <img src="model/uploads/<?php echo $ride['profile_photo_path'] ?>" alt="Driver's Profile Picture" class="profile-pic">
+                    <?php else: ?>
+                      <img src="images/person.png" alt="Default Profile Picture" alt="Driver's Profile Picture" class="profile-pic">
+<?php endif; ?>           
  
             
             <h4><?php echo htmlspecialchars($ride['name']); ?></h4>
@@ -56,9 +60,9 @@ $profilePhotoPath = htmlspecialchars($profilePhotoPath);
                 <div class="ride-location">
                 <p>Departure: <?php echo htmlspecialchars($ride['departure']); ?></p>
                 <p>Destination: <?php echo htmlspecialchars($ride['arrival']); ?></p>
-                </div>
+                <p>Date: <?php echo htmlspecialchars($ride['date']); ?></p>
                 <p>Time: <?php echo htmlspecialchars($ride['time']); ?></p>
-                
+                </div>
             </div>
             <button onclick="location.href='/model/book-trip.model.php?ride_id=<?php echo $ride['ride_id']; ?>'">Book Trip</button>
             <!-- <button onclick="handleRideDetails('<?php echo $ride['ride_id']; ?>')">Book Trip</button> -->
