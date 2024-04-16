@@ -54,7 +54,7 @@ function sanitizeFileName($filename) {
     return preg_replace('/[^A-Za-z0-9._-]/', '', $filename);
 }
 
-function handleFileUpload($fileField, $uploadDir = 'uploads/') {
+function handleFileUpload($fileField, $uploadDir = '/model/uploads/') {
     if (!file_exists($uploadDir) && !mkdir($uploadDir, 0777, true) && !is_dir($uploadDir)) {
         throw new RuntimeException(sprintf('Directory "%s" was not created', $uploadDir));
     }

@@ -800,10 +800,11 @@ footer {
 }
 
 .user-info img.profile-pic {
-    width: 80px; /* Adjust based on your preference */
-    height:80px;
-    border-radius: 50%; /* Circular profile pictures */
-    
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;      
+    object-position: center; 
 }
 
  .user-info span , .user-info a {
