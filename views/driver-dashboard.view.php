@@ -36,7 +36,7 @@ try {
         </div>
         <div class="user-info">
         <?php if ($user['profile_photo_path']): ?>
-         <img src="/uploads/<?php echo $user['profile_photo_path'] ?>" alt="Profile Picture1" class="profile-pic">
+         <img src="model/uploads/<?php echo $user['profile_photo_path'] ?>" alt="Profile Picture1" class="profile-pic">
             <?php else: ?>
             <img src="images/person.png" alt="Default Profile Picture" class="profile-pic">
         <?php endif; ?>
